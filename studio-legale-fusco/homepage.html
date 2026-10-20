@@ -1,0 +1,416 @@
+<!doctype html>
+<html lang="it">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Legale Fusco · Avvocato a Latina</title>
+<meta name="description" content="Avv. Lorenzo Fusco, avvocato a Latina in via Quarto 41. Diritto di famiglia e successioni, condominio, contratti, società, responsabilità medica e sinistri. Chiama o scrivi per una prima consulenza.">
+<meta name="color-scheme" content="light">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Caslon+Display&family=Archivo+Narrow:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --carta:#f8f8f4;
+  --riga:#c9d4e0;
+  --margine:#cf4a3f;
+  --inchiostro:#172030;
+  --testo-2:#465065;
+  --viola:#56399a;
+  --viola-velo:rgb(86 57 154 / .09);
+  --marca-carta:#fbf4e6;
+  --marca-verde:#3d7a5c;
+  --marca-rosa:#c96d86;
+  --r:34px;            /* interlinea: tutto il testo poggia sulle righe */
+  --m:104px;           /* larghezza del margine */
+  --wrap:min(1180px, 100% - 32px);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
+body{margin:0;background:#e9ebe6;color:var(--inchiostro);font:400 18px/var(--r) "Libre Caslon Text",Georgia,serif}
+::selection{background:var(--viola);color:#fff}
+:focus-visible{outline:2px solid var(--viola);outline-offset:3px}
+a{color:var(--viola);text-underline-offset:.2em;text-decoration-thickness:1px}
+img{max-width:100%;height:auto;display:block}
+p,h1,h2,h3,ul,ol,dl,dd{margin:0}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+.etichetta{font-family:"Archivo Narrow",sans-serif;font-weight:600;font-size:14px;letter-spacing:.1em;text-transform:uppercase}
+
+/* il foglio */
+.foglio{
+  position:relative;width:var(--wrap);margin:0 auto;
+  background-color:var(--carta);
+  background-image:
+    linear-gradient(90deg, transparent calc(var(--m) - 7px), var(--margine) calc(var(--m) - 7px), var(--margine) calc(var(--m) - 6px), transparent calc(var(--m) - 6px), transparent calc(var(--m) - 2px), var(--margine) calc(var(--m) - 2px), var(--margine) calc(var(--m) - 1px), transparent calc(var(--m) - 1px)),
+    repeating-linear-gradient(180deg, transparent 0 calc(var(--r) - 1px), var(--riga) calc(var(--r) - 1px) var(--r));
+  background-position:0 0, 0 calc(var(--r) * 2);
+  padding:calc(var(--r) * 2) 48px calc(var(--r) * 2) calc(var(--m) + 32px);
+  box-shadow:0 1px 0 rgb(0 0 0 / .04), 0 24px 40px -32px rgb(20 30 40 / .35);
+}
+.foglio + .foglio{margin-top:var(--r)}
+.foglio::before{ /* intestazione del foglio, sopra le righe */
+  content:attr(data-foglio);position:absolute;top:calc(var(--r) * .6);right:48px;
+  font:600 13px/1 "Archivo Narrow",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#626b7d;
+}
+.numeri{position:absolute;left:0;top:calc(var(--r) * 2);width:calc(var(--m) - 18px);margin:0;padding:0;list-style:none;text-align:right;
+  font:500 12px/var(--r) "Archivo Narrow",sans-serif;color:#9aa4b3;font-variant-numeric:tabular-nums;pointer-events:none}
+.numeri li{height:var(--r);transition:color .2s}
+.numeri li.acceso{color:var(--viola);font-weight:700}
+
+/* testata */
+.testata{display:flex;justify-content:space-between;align-items:flex-start;gap:var(--r) 32px;flex-wrap:wrap}
+.studio{font-family:"Libre Caslon Display",Georgia,serif;font-size:clamp(46px,6.4vw,92px);line-height:calc(var(--r) * 2.5);letter-spacing:-.01em;font-weight:400}
+.studio .legale{display:block;font-family:"Archivo Narrow",sans-serif;font-size:15px;line-height:var(--r);letter-spacing:.32em;text-transform:uppercase;font-weight:600;color:var(--testo-2)}
+.menu{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:0 24px;font-family:"Archivo Narrow",sans-serif;font-weight:600;font-size:16px;letter-spacing:.04em}
+.menu a{color:var(--inchiostro);text-decoration:none;border-bottom:1px solid transparent}
+.menu a:hover{border-bottom-color:var(--viola);color:var(--viola)}
+
+/* apertura */
+.apertura{display:grid;grid-template-columns:minmax(0,1fr) 300px;gap:0 56px;margin-top:var(--r)}
+.apertura h1{font-family:"Libre Caslon Text",Georgia,serif;font-weight:400;font-size:clamp(26px,2.9vw,38px);line-height:calc(var(--r) * 1.5);max-width:21em;text-wrap:balance}
+.apertura h1 em{color:var(--viola)}
+.problemi{list-style:none;padding:0;margin-top:var(--r)}
+.problemi li{display:flex;justify-content:space-between;gap:16px;height:auto;min-height:var(--r)}
+.problemi a{color:var(--inchiostro);text-decoration:none;display:flex;gap:14px;align-items:baseline;flex:1;border-radius:2px;padding:0 6px;margin:0 -6px;transition:background-color .2s,color .2s}
+.problemi a:hover,.problemi a:focus-visible{background:var(--viola-velo);color:var(--viola)}
+.problemi .rif{font:600 13px/var(--r) "Archivo Narrow",sans-serif;letter-spacing:.06em;color:#626b7d;min-width:5.5em}
+.problemi a:hover .rif{color:var(--viola)}
+
+/* la marca da bollo: è il pulsante di chiamata */
+.bollo{position:relative;justify-self:end;align-self:start;width:270px;margin-top:calc(var(--r) * -1)}
+.marca{
+  display:block;position:relative;text-decoration:none;color:#2c3b33;
+  width:236px;padding:16px;
+  /* dentellatura: fori color carta lungo i quattro bordi */
+  background:
+    radial-gradient(circle at 50% 0, var(--carta) 4.5px, #0000 5px) 0 0 / 12px 10px repeat-x,
+    radial-gradient(circle at 50% 100%, var(--carta) 4.5px, #0000 5px) 0 100% / 12px 10px repeat-x,
+    radial-gradient(circle at 0 50%, var(--carta) 4.5px, #0000 5px) 0 0 / 10px 12px repeat-y,
+    radial-gradient(circle at 100% 50%, var(--carta) 4.5px, #0000 5px) 100% 0 / 10px 12px repeat-y,
+    var(--marca-carta);
+  box-shadow:0 8px 14px -10px rgb(30 30 40 / .35);
+  transform:rotate(1.6deg);transition:transform .35s cubic-bezier(.16,1,.3,1);
+}
+.marca:hover{transform:rotate(0) translateY(-3px)}
+.marca .vignetta{display:block;position:relative;border:1.5px solid var(--marca-verde);padding:14px 12px 12px;text-align:center;overflow:hidden;
+  background:
+    url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='40' height='40'%3E%3Cg fill='none' stroke='%233d7a5c' stroke-width='.6' opacity='.35'%3E%3Cpath d='M0 20c10-14 30-14 40 0M0 20c10 14 30 14 40 0M20 0c-14 10-14 30 0 40M20 0c14 10 14 30 0 40'/%3E%3C/g%3E%3C/svg%3E"),
+    radial-gradient(circle at 50% 46%, rgb(201 109 134 / .28), transparent 62%);
+}
+.marca .valore{font:700 13px/1.2 "Archivo Narrow",sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--marca-verde)}
+.marca .numero{display:block;font:700 30px/1.1 "Archivo Narrow",sans-serif;letter-spacing:.01em;color:#1f2b25;margin:10px 0 6px;font-variant-numeric:tabular-nums}
+.marca .azione{display:block;font:600 14px/1.3 "Archivo Narrow",sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#1f2b25}
+.marca .orari{display:block;font:italic 400 14px/1.4 "Libre Caslon Text",serif;color:#4b5a52;margin-top:8px}
+.timbro{position:absolute;left:150px;top:150px;width:140px;height:140px;color:var(--viola);transform:rotate(-12deg);opacity:.86;pointer-events:none;mix-blend-mode:multiply;transition:transform .5s cubic-bezier(.16,1,.3,1),opacity .3s}
+.bollo:hover .timbro{transform:rotate(-12deg) scale(1.04)}
+.altri{margin-top:calc(var(--r) * 3);font-family:"Archivo Narrow",sans-serif;font-size:16px;line-height:var(--r)}
+.altri a{display:flex;gap:10px;align-items:center;color:var(--inchiostro);text-decoration:none;font-weight:600}
+.altri a:hover{color:var(--viola)}
+.altri svg{width:18px;height:18px;flex:none;color:var(--viola)}
+
+/* sezioni */
+.sez-testa{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:0 56px;align-items:end;margin-bottom:var(--r)}
+h2{font-family:"Libre Caslon Display",Georgia,serif;font-weight:400;font-size:clamp(36px,4.2vw,58px);line-height:calc(var(--r) * 2);letter-spacing:-.01em}
+.sez-testa p{color:var(--testo-2)}
+
+/* legenda delle materie */
+.legenda{list-style:none;padding:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:0 56px}
+.materia{position:relative;padding:var(--r) 0 0;scroll-margin-top:var(--r)}
+.materia::before{content:"";position:absolute;inset:0 -12px auto -12px;height:100%;background:var(--viola-velo);opacity:0;transition:opacity .25s;pointer-events:none;border-radius:2px}
+.materia.acceso::before,.materia:target::before{opacity:1}
+.materia h3{font-family:"Libre Caslon Text",Georgia,serif;font-weight:700;font-size:21px;line-height:var(--r);display:flex;gap:12px;align-items:baseline}
+.materia h3 .sigla{font:700 13px/var(--r) "Archivo Narrow",sans-serif;letter-spacing:.1em;color:var(--viola);min-width:2.4em}
+.materia p{color:var(--testo-2);padding-left:calc(2.4em + 12px)}
+.materia .voci{list-style:none;padding:0 0 0 calc(2.4em + 12px);display:flex;flex-wrap:wrap;gap:0 18px;font-family:"Archivo Narrow",sans-serif;font-size:15px;font-weight:500;color:var(--inchiostro)}
+.materia .voci li::before{content:"·";color:var(--viola);margin-right:8px}
+.nota-materie{margin-top:var(--r);color:var(--testo-2);font-style:italic}
+
+/* chi sono */
+.chi{display:grid;grid-template-columns:200px minmax(0,1fr) minmax(0,1fr);gap:0 48px;align-items:start}
+.tessera{position:relative;margin:calc(var(--r) * .5) 0 0;width:168px;transform:rotate(-2.2deg)}
+.tessera img{width:168px;height:216px;object-fit:cover;filter:saturate(.85) contrast(1.02);box-shadow:0 8px 16px -10px rgb(20 30 40 / .5)}
+.tessera svg{position:absolute;top:-14px;left:24px;width:24px;height:60px;color:#8b939c}
+.tessera figcaption{font:italic 400 14px/1.4 "Libre Caslon Text",serif;color:var(--testo-2);margin-top:12px;transform:rotate(2.2deg)}
+.chi .racconto{display:grid;gap:var(--r)}
+.chi .racconto p:first-child{font-size:22px}
+.titoli{list-style:none;padding:0}
+.titoli li{display:grid;grid-template-columns:7.5em 1fr;gap:12px}
+.titoli .quando{font:600 13px/var(--r) "Archivo Narrow",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--viola)}
+.titoli .cosa{color:var(--inchiostro)}
+
+/* contatti in calce */
+.calce{display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:0 56px}
+.recapiti{display:grid;grid-template-columns:8em 1fr;margin-top:var(--r)}
+.recapiti dt{font:600 13px/var(--r) "Archivo Narrow",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:#5f687a}
+.recapiti dd a{color:var(--inchiostro)}
+.recapiti dd a:hover{color:var(--viola)}
+.scrivi{border:1.5px solid var(--viola);padding:calc(var(--r) - 1.5px) 28px;background:rgb(255 255 255 / .55);position:relative}
+.scrivi h3{font-family:"Libre Caslon Text",serif;font-weight:700;font-size:22px;line-height:var(--r)}
+.scrivi p{color:var(--testo-2)}
+.scrivi label{display:block;margin-top:var(--r);font:600 13px/var(--r) "Archivo Narrow",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--testo-2)}
+.scrivi select,.scrivi textarea{display:block;width:100%;font:400 17px/var(--r) "Libre Caslon Text",serif;color:var(--inchiostro);background:transparent;border:0;border-bottom:1px solid var(--inchiostro);border-radius:0;padding:0 2px;min-height:var(--r)}
+.scrivi textarea{resize:vertical;height:calc(var(--r) * 3);background:repeating-linear-gradient(180deg, transparent 0 calc(var(--r) - 1px), var(--riga) calc(var(--r) - 1px) var(--r));border-bottom:0}
+.scrivi select:focus,.scrivi textarea:focus{outline:2px solid var(--viola);outline-offset:2px}
+.bottoni{display:flex;flex-wrap:wrap;gap:12px;margin-top:var(--r)}
+.btn{display:inline-flex;align-items:center;gap:10px;font:700 16px/1 "Archivo Narrow",sans-serif;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:13px 20px;border:1.5px solid var(--viola);border-radius:2px;cursor:pointer;transition:background-color .2s,color .2s}
+.btn svg{width:18px;height:18px}
+.btn-pieno{background:var(--viola);color:#fff}
+.btn-pieno:hover{background:#432a7d;color:#fff}
+.btn-filo{background:transparent;color:var(--viola)}
+.btn-filo:hover{background:var(--viola-velo)}
+.deonto{margin-top:var(--r);font-size:15px;color:var(--testo-2);font-style:italic}
+
+.piede{width:var(--wrap);margin:0 auto;padding:var(--r) 0 calc(var(--r) * 1.5);display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px 24px;font:500 14px/1.6 "Archivo Narrow",sans-serif;letter-spacing:.03em;color:#5d6575}
+
+@media (max-width:980px){
+  :root{--m:64px}
+  .foglio{padding-right:28px;padding-left:calc(var(--m) + 18px)}
+  .foglio::before{right:28px}
+  .apertura,.sez-testa,.calce{grid-template-columns:1fr}
+  .apertura{display:flex;flex-direction:column}
+  .apertura > div:first-child{display:contents}
+  .apertura h1{order:1}
+  .bollo{order:2;justify-self:start;margin:var(--r) 0 calc(var(--r) * 1.5)}
+  .problemi{order:3}
+  .legenda{grid-template-columns:1fr}
+  .chi{grid-template-columns:1fr}
+  .tessera{margin-bottom:var(--r)}
+}
+@media (max-width:560px){
+  :root{--m:40px;--r:32px}
+  body{font-size:17px}
+  .foglio{padding-right:18px;padding-left:calc(var(--m) + 12px)}
+  .foglio::before{right:18px}
+  .numeri{font-size:10px;width:calc(var(--m) - 12px)}
+  .studio{font-size:clamp(38px,11vw,52px);line-height:calc(var(--r) * 2)}
+  .studio .legale{letter-spacing:.22em}
+  .problemi .rif{display:none}
+  .apertura h1{font-size:26px;line-height:var(--r)}
+  .materia p,.materia .voci{padding-left:0}
+  .titoli li{grid-template-columns:1fr;gap:0}
+  .recapiti{grid-template-columns:1fr}
+  .scrivi{padding-left:18px;padding-right:18px}
+  .timbro{left:150px;width:124px;height:124px}
+}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.8 11.9 11.9 0 0 0 4.6 4c1.7.7 2.3.8 3.2.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  <symbol id="i-tel" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M5 3h4l2 5-2.5 1.5a11 11 0 0 0 6 6L16 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 5a2 2 0 0 1 2-2Z"/></symbol>
+  <symbol id="i-mail" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="1"/><path d="m3.5 6 8.5 7 8.5-7"/></g></symbol>
+</svg>
+
+<main>
+  <section class="foglio" data-foglio="Foglio 1 di 4" aria-labelledby="t-apertura">
+    <ol class="numeri" aria-hidden="true"></ol>
+    <header class="testata">
+      <p class="studio"><span class="legale">Studio legale</span>Fusco</p>
+      <nav aria-label="Menu principale">
+        <ul class="menu">
+          <li><a href="#materie">Di cosa mi occupo</a></li>
+          <li><a href="#chi">Chi sono</a></li>
+          <li><a href="#contatti">Contatti</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <div class="apertura">
+      <div>
+        <h1 id="t-apertura">Avv. Lorenzo Fusco, avvocato a Latina. Ti ascolto, ti spiego <em>in parole semplici</em> come stanno le cose e seguo la tua pratica di persona.</h1>
+        <ul class="problemi" aria-label="Problemi di cui mi occupo">
+          <li><a href="#m-fam" data-materia="m-fam"><span class="rif">Famiglia</span>Ti stai separando o divorziando</a></li>
+          <li><a href="#m-fam" data-materia="m-fam"><span class="rif">Successioni</span>Devi dividere un'eredità o tutelare i tuoi beni</a></li>
+          <li><a href="#m-con" data-materia="m-con"><span class="rif">Condominio</span>Non sei d'accordo con una delibera del condominio</a></li>
+          <li><a href="#m-med" data-materia="m-med"><span class="rif">Sanità</span>Un intervento o una diagnosi sono andati male</a></li>
+          <li><a href="#m-ext" data-materia="m-ext"><span class="rif">Sinistri</span>Hai avuto un incidente e aspetti il risarcimento</a></li>
+          <li><a href="#m-obb" data-materia="m-obb"><span class="rif">Contratti</span>Un contratto non viene rispettato</a></li>
+          <li><a href="#m-soc" data-materia="m-soc"><span class="rif">Impresa</span>Apri una società o hai bisogno di assistenza</a></li>
+        </ul>
+      </div>
+
+      <div class="bollo">
+        <a class="marca" href="tel:+390773489421">
+          <span class="vignetta">
+            <span class="valore">Prima consulenza</span>
+            <span class="numero">0773 489421</span>
+            <span class="azione">Chiama lo studio</span>
+            <span class="orari">Latina, via Quarto 41</span>
+          </span>
+        </a>
+        <svg class="timbro" viewBox="0 0 200 200" aria-hidden="true">
+          <defs><path id="giro" d="M100 100m-74 0a74 74 0 1 1 148 0a74 74 0 1 1-148 0"/></defs>
+          <g fill="none" stroke="currentColor"><circle cx="100" cy="100" r="94" stroke-width="3.2"/><circle cx="100" cy="100" r="88" stroke-width="1.2"/><circle cx="100" cy="100" r="58" stroke-width="1.6"/></g>
+          <text fill="currentColor" font-family="Archivo Narrow, sans-serif" font-weight="700" font-size="16" letter-spacing="2.2"><textPath href="#giro">STUDIO LEGALE FUSCO · VIA QUARTO 41 · LATINA ·</textPath></text>
+          <text x="100" y="94" text-anchor="middle" fill="currentColor" font-family="Libre Caslon Text, serif" font-size="17">Avv.</text>
+          <text x="100" y="116" text-anchor="middle" fill="currentColor" font-family="Libre Caslon Text, serif" font-size="17">L. Fusco</text>
+        </svg>
+        <div class="altri">
+          <a href="#" data-wa="Buongiorno avvocato, vorrei fissare una prima consulenza."><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp · 339 255 0177</a>
+          <a href="mailto:fusco.lorenzo6@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg>fusco.lorenzo6@gmail.com</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="foglio" id="materie" data-foglio="Foglio 2 di 4" aria-labelledby="t-materie">
+    <ol class="numeri" aria-hidden="true"></ol>
+    <div class="sez-testa">
+      <h2 id="t-materie">Di cosa mi occupo</h2>
+      <p>Diritto civile e tributario, sia fuori dal tribunale sia in giudizio. Se il tuo caso è penale o amministrativo, ti affido a colleghi con cui collaboro stabilmente.</p>
+    </div>
+    <ul class="legenda">
+      <li class="materia" id="m-fam">
+        <h3><span class="sigla">FAM</span>Famiglia e successioni</h3>
+        <p>Separazione consensuale o giudiziale, divorzio, trasferimento di beni con il trust, disposizioni sul fine vita. È la materia in cui mi sono specializzato con un master alla LUISS.</p>
+        <ul class="voci"><li>Separazione</li><li>Divorzio</li><li>Eredità</li><li>Trust</li></ul>
+      </li>
+      <li class="materia" id="m-con">
+        <h3><span class="sigla">CON</span>Condominio</h3>
+        <p>Impugnazione delle delibere, tabelle millesimali, recupero delle quote non pagate, assistenza in assemblea, regolamenti condominiali.</p>
+        <ul class="voci"><li>Delibere</li><li>Millesimi</li><li>Morosità</li><li>Assemblea</li></ul>
+      </li>
+      <li class="materia" id="m-med">
+        <h3><span class="sigla">MED</span>Responsabilità medica</h3>
+        <p>Cause contro strutture sanitarie: un intervento eseguito male, una diagnosi mancata o sbagliata, la perdita di chance, il danno biologico. Lavoro insieme a medici legali dall'inizio alla fine.</p>
+        <ul class="voci"><li>Malasanità</li><li>Danno biologico</li></ul>
+      </li>
+      <li class="materia" id="m-ext">
+        <h3><span class="sigla">EXT</span>Sinistri e risarcimenti</h3>
+        <p>Responsabilità civile extracontrattuale, a partire dagli incidenti stradali, fino al risarcimento.</p>
+        <ul class="voci"><li>Incidenti stradali</li><li>Risarcimento danni</li></ul>
+      </li>
+      <li class="materia" id="m-obb">
+        <h3><span class="sigla">OBB</span>Obbligazioni e contratti</h3>
+        <p>Scrivo contratti tipo e ti assisto quando nasce una lite su come un contratto va interpretato o eseguito.</p>
+        <ul class="voci"><li>Contratti</li><li>Inadempimenti</li></ul>
+      </li>
+      <li class="materia" id="m-soc">
+        <h3><span class="sigla">SOC</span>Società e consorzi</h3>
+        <p>Affianco società appena costituite, imprenditori individuali e società di capitali: dallo statuto all'attività di ogni giorno.</p>
+        <ul class="voci"><li>Statuti</li><li>Assistenza alle imprese</li></ul>
+      </li>
+    </ul>
+  </section>
+
+  <section class="foglio" id="chi" data-foglio="Foglio 3 di 4" aria-labelledby="t-chi">
+    <ol class="numeri" aria-hidden="true"></ol>
+    <div class="sez-testa"><h2 id="t-chi">Chi sono</h2></div>
+    <div class="chi">
+      <figure class="tessera">
+        <svg viewBox="0 0 24 60" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" d="M8 56V12a4 4 0 0 1 8 0v38a2.5 2.5 0 0 1-5 0V16"/></svg>
+        <img src="data:image/webp;base64,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" alt="Ritratto dell'avvocato Lorenzo Fusco" width="168" height="216">
+        <figcaption>Avv. Lorenzo Fusco, titolare</figcaption>
+      </figure>
+      <div class="racconto">
+        <p>Sono Lorenzo Fusco, avvocato del foro di Latina e titolare dello studio.</p>
+        <p>Ogni pratica la seguo io, dal primo colloquio alla fine. Il rapporto con chi mi affida un problema è la base del lavoro: per questo ti spiego cosa si può fare, fuori dal tribunale quando si può e in giudizio quando serve.</p>
+        <p>Per le questioni che richiedono altre competenze collaboro con colleghi avvocati e con medici legali.</p>
+      </div>
+      <ul class="titoli" aria-label="Formazione e percorso">
+        <li><span class="quando">Laurea</span><span class="cosa">Università Roma Tre, tesi in diritto costituzionale</span></li>
+        <li><span class="quando">Pratica</span><span class="cosa">Avvocatura del Comune di Latina, vinta per concorso nel 2019</span></li>
+        <li><span class="quando">Abilitazione</span><span class="cosa">Esame alla Corte d'appello di Roma</span></li>
+        <li><span class="quando">Master</span><span class="cosa">II livello in diritto di famiglia, LUISS Guido Carli, 110 e lode</span></li>
+        <li><span class="quando">Albo</span><span class="cosa">Ordine degli Avvocati di Latina</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section class="foglio" id="contatti" data-foglio="Foglio 4 di 4" aria-labelledby="t-contatti">
+    <ol class="numeri" aria-hidden="true"></ol>
+    <div class="calce">
+      <div>
+        <h2 id="t-contatti">Contatti</h2>
+        <dl class="recapiti">
+          <dt>Studio</dt><dd><a href="https://www.google.com/maps/search/?api=1&amp;query=Via+Quarto+41+04100+Latina" target="_blank" rel="noopener">Via Quarto 41, 04100 Latina</a></dd>
+          <dt>Telefono</dt><dd><a href="tel:+390773489421">0773 489421</a></dd>
+          <dt>Cellulare</dt><dd><a href="tel:+393392550177">339 255 0177</a></dd>
+          <dt>Email</dt><dd><a href="mailto:fusco.lorenzo6@gmail.com">fusco.lorenzo6@gmail.com</a></dd>
+          <dt>PEC</dt><dd><a href="mailto:fusco.lorenzo@legalmail.it">fusco.lorenzo@legalmail.it</a></dd>
+          <dt>P. IVA</dt><dd>02984220596</dd>
+        </dl>
+      </div>
+      <form class="scrivi" id="scrivi" aria-labelledby="t-scrivi">
+        <h3 id="t-scrivi">Scrivimi due righe</h3>
+        <p>Ti richiamo io per fissare la prima consulenza.</p>
+        <label for="materia">Di cosa si tratta</label>
+        <select id="materia" name="materia">
+          <option>Separazione o divorzio</option>
+          <option>Eredità e successioni</option>
+          <option>Condominio</option>
+          <option>Responsabilità medica</option>
+          <option>Incidente o risarcimento</option>
+          <option>Contratti</option>
+          <option>Società e imprese</option>
+          <option>Altro</option>
+        </select>
+        <label for="due-righe">In breve (facoltativo)</label>
+        <textarea id="due-righe" name="due-righe" rows="3"></textarea>
+        <div class="bottoni">
+          <button class="btn btn-pieno" type="submit" data-canale="wa"><svg aria-hidden="true"><use href="#i-wa"/></svg>Invia su WhatsApp</button>
+          <button class="btn btn-filo" type="submit" data-canale="mail"><svg aria-hidden="true"><use href="#i-mail"/></svg>Per email</button>
+        </div>
+        <p class="deonto">Non scrivere qui dati sensibili: ne parliamo di persona, in studio.</p>
+      </form>
+    </div>
+  </section>
+</main>
+
+<footer class="piede">
+  <span>Studio Legale Fusco · Avv. Lorenzo Fusco · Via Quarto 41, 04100 Latina · P. IVA 02984220596</span>
+  <span>Ordine degli Avvocati di Latina</span>
+</footer>
+
+<script>
+  // Cellulare dello studio per WhatsApp (senza + e spazi). Da confermare con l'avvocato.
+  const WHATSAPP = "393392550177";
+  const EMAIL = "fusco.lorenzo6@gmail.com";
+
+  function apriWa(testo){ window.open("https://wa.me/" + WHATSAPP + "?text=" + encodeURIComponent(testo), "_blank", "noopener"); }
+  document.querySelectorAll("[data-wa]").forEach(a => a.addEventListener("click", e => { e.preventDefault(); apriWa(a.dataset.wa); }));
+
+  const form = document.getElementById("scrivi");
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    const materia = form.materia.value, righe = form["due-righe"].value.trim();
+    const testo = `Buongiorno avvocato, vorrei una prima consulenza. Si tratta di: ${materia.toLowerCase()}.` + (righe ? `\n${righe}` : "");
+    if (e.submitter && e.submitter.dataset.canale === "mail") location.href = `mailto:${EMAIL}?subject=${encodeURIComponent("Richiesta di consulenza: " + materia)}&body=${encodeURIComponent(testo)}`;
+    else apriWa(testo);
+  });
+
+  // numeri di riga nel margine, uno per ogni riga del foglio
+  function numera(){
+    document.querySelectorAll(".foglio").forEach(f => {
+      const r = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--r")) || 34;
+      const n = Math.max(0, Math.floor((f.offsetHeight - r * 2) / r));
+      const ol = f.querySelector(".numeri");
+      if (ol.children.length === n) return;
+      ol.innerHTML = Array.from({length:n}, (_, i) => `<li>${i + 1}</li>`).join("");
+    });
+  }
+  numera(); addEventListener("resize", numera); document.fonts && document.fonts.ready.then(numera);
+
+  // la riga del problema accende il numero a margine; la materia corrispondente si evidenzia
+  const legenda = document.querySelectorAll(".materia");
+  function riga(el){
+    const f = el.closest(".foglio"), ol = f.querySelector(".numeri");
+    const r = parseFloat(getComputedStyle(document.documentElement).getPropertyValue("--r")) || 34;
+    return ol.children[Math.round((el.getBoundingClientRect().top - f.getBoundingClientRect().top - r * 2) / r)];
+  }
+  function spegni(){ document.querySelectorAll(".numeri li.acceso, .materia.acceso").forEach(x => x.classList.remove("acceso")); }
+  document.querySelectorAll("[data-materia]").forEach(a => {
+    const on = () => { spegni(); const li = riga(a); li && li.classList.add("acceso"); document.getElementById(a.dataset.materia).classList.add("acceso"); };
+    a.addEventListener("pointerenter", on); a.addEventListener("focus", on);
+    a.addEventListener("pointerleave", spegni); a.addEventListener("blur", spegni);
+  });
+  legenda.forEach(m => {
+    const h = m.querySelector("h3");
+    m.addEventListener("pointerenter", () => { spegni(); m.classList.add("acceso"); const li = riga(h); li && li.classList.add("acceso"); });
+    m.addEventListener("pointerleave", spegni);
+  });
+</script>
+</body>
+</html>
