@@ -24,7 +24,7 @@ Daily bank reconciliation, scheduled meetings with consiglieri, free payment rem
 ## Capabilities and Constraints
 - Primary action (confirmed): quick contact — quote on WhatsApp; documents area for existing condòmini.
 - Offices: Via della Crocetta 6/B 40134; Via Vasari 30 40128; Piazza dei Martiri 1 40121 (Bologna). Studio phone 051 412 8051.
-- Team: Mauro Tampellini (amministratore condominiale, studiotampellini@gmail.com, PEC mauro.tampellini@pec.it); Giovanna Bigi (responsabile contabilità); Federico De Blasi (amministratore condominiale, +39 327 913 7510, federico.deblasi@studiotampellini.it); Clara Tampellini (+39 353 445 4152, clara.tampellini@studiotampellini.it); Domenico Faniello (+39 351 396 0485, domenico.faniello@studiotampellini.it). Roles of Clara and Domenico not stated: mark as to confirm.
+- Team: Mauro Tampellini (amministratore condominiale, studiotampellini@gmail.com, PEC mauro.tampellini@pec.it); Giovanna Bigi (responsabile contabilità); Federico De Blasi (amministratore condominiale, +39 327 913 7510, federico.deblasi@studiotampellini.it); Clara Tampellini (+39 353 445 4152, clara.tampellini@studiotampellini.it); Domenico Faniello (+39 351 396 0485, domenico.faniello@studiotampellini.it). The current site lists Clara and Domenico among the contacts and introduces the team as "il personale di riferimento"; no more specific role is stated, so the page labels them "Referente" (to confirm with the studio).
 - WhatsApp number for quotes not stated on the site: mark as to confirm.
 - Documents (PDF on current site): Registrazione Email Certificata, Ripartizione spese condominiali, Targhette campanelli, Registro anagrafe condominiale, Comunicazione lavori straordinari.
 

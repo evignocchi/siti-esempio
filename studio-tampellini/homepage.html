@@ -185,7 +185,7 @@ h1 em{font-style:normal;color:var(--blu)}
   .saldo{margin:8px 18px 24px;padding:20px 18px !important;border:1px solid var(--colonna)}
   .voce .nota,.tot,.azioni{text-align:left;justify-content:flex-start}
   .sezione > *{padding-top:6px;padding-bottom:6px}
-  .sezione > :first-child{padding-top:44px}
+  .sezione > .c-2-4{padding-top:44px}
   .barra .lab-term{left:auto;right:0}
 }
 @media (max-width:520px){
@@ -391,9 +391,9 @@ h1 em{font-style:normal;color:var(--blu)}
 
   // l'anno del condominio: dove siamo oggi, e la scadenza per l'esercizio in corso
   (function () {
-    const oggi = new Date(), anno = oggi.getFullYear();
+    const ora = new Date(), anno = ora.getFullYear(), oggi = new Date(anno, ora.getMonth(), ora.getDate());
     const inizio = new Date(anno, 0, 1), fine = new Date(anno, 11, 31);
-    const giorni = Math.round((oggi - inizio) / 864e5) + 1;
+    const giorni = Math.floor((Date.UTC(anno, oggi.getMonth(), oggi.getDate()) - Date.UTC(anno, 0, 1)) / 864e5) + 1;
     const scad = new Date(fine); scad.setDate(scad.getDate() + 180);
     const fmt = d => d.toLocaleDateString("it-IT", {day:"numeric", month:"long", year:"numeric"});
     const segno = document.getElementById("oggi");
