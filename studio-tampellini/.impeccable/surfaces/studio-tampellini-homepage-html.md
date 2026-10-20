@@ -16,3 +16,5 @@ FIRST VIEWPORT: A ledger page: header row of columns; the first entries are the 
 FORM: Registro contabile, position 4 of 7 grounded; seed:bc75de6f13eed4e1.
 Signature interaction: the condominium-year timeline: hover/scroll marks today and shows the next obligation; ledger rows highlight like a ruler laid across the page.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+
+Adaptations (recorded after finish review): ledger columns are Data / Causale / Rif. / Saldo, not Dare / Avere, because PRODUCT.md forbids inventing amounts; the Saldo column carries the quote action and the "Voci" totals. The quote falls back to email until the studio gives a WhatsApp number. Clara Tampellini and Domenico Faniello are labeled "Referente" from the current site's own wording ("personale di riferimento").

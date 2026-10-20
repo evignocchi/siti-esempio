@@ -16,3 +16,5 @@ FIRST VIEWPORT: Full-bleed photo of the villa on the Marina Lunga water, cut at 
 FORM: Pumice & obsidian, position 6 of 7 grounded; seed:27c71818a46cc6ca. Raise from design annual plate section: photographs untinted and presented as plates with a credit line (place, flat).
 Signature interaction: choosing a flat in the slab or clicking "Chiedi per questo" on a flat fills the slab; the obsidian sheen follows the pointer.
 FINISH: unreviewed and undocumented is unfinished; this build ends with the finish review, the verdict, DESIGN.md, and every shipping raster carrying its provenance
+
+Adaptations (recorded after finish review): hero uses the view from the villa terrace instead of the villa seen from the water, citing PRODUCT.md "the sea is the product"; the villa itself leads the turquoise band as the drone plate. Display face is Chakra Petch (chamfered, cut terminals that echo the faceted slabs); Anybody was dropped as too round. The long line registers to the sea horizon of the hero photo via a measured overlay.

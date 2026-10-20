@@ -26,6 +26,9 @@
 html{scroll-behavior:smooth;-webkit-text-size-adjust:100%}
 body{margin:0;background:var(--carta-2);color:var(--inchiostro);font:400 17px/1.55 "Sofia Sans",system-ui,sans-serif;font-variant-numeric:tabular-nums}
 ::selection{background:var(--blu);color:#fff}
+html{scrollbar-color:var(--colonna) var(--carta-2);accent-color:var(--blu)}
+input,select,textarea{caret-color:var(--blu)}
+::placeholder{color:#5f6459;opacity:1}
 :focus-visible{outline:2px solid var(--blu);outline-offset:2px}
 a{color:var(--blu);text-underline-offset:.2em;text-decoration-thickness:1px}
 img{max-width:100%;height:auto;display:block}
@@ -70,6 +73,10 @@ h1,h2,h3,p,ul,ol{margin:0}
 h1{font:800 clamp(40px,5.3vw,74px)/.98 "Sofia Sans Condensed",sans-serif;letter-spacing:-.015em;text-wrap:balance}
 h1 em{font-style:normal;color:var(--blu)}
 .missione{margin-top:22px;font-size:19px;max-width:36em;color:var(--testo-2)}
+.sedi-apertura{list-style:none;padding:0;margin-top:28px;border-top:1px solid var(--colonna);max-width:36em}
+.sedi-apertura li{display:grid;grid-template-columns:5.5em 1fr auto;gap:12px;padding:8px 0;border-bottom:1px solid var(--riga);font-weight:600}
+.sedi-apertura span{font:700 14px/1.6 "Sofia Sans Condensed",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--blu)}
+.sedi-apertura span:last-child{color:var(--testo-2);letter-spacing:.04em}
 .rif{font:700 13px/1.3 "Sofia Sans Condensed",sans-serif;letter-spacing:.08em;text-transform:uppercase;color:var(--testo-2)}
 .rif b{display:block;font-size:20px;color:var(--inchiostro);letter-spacing:.02em}
 
@@ -100,8 +107,8 @@ h1 em{font-style:normal;color:var(--blu)}
 .sezione .num{font:700 14px/1.2 "Sofia Sans Condensed",sans-serif;letter-spacing:.12em;color:var(--blu);text-transform:uppercase}
 
 /* voci */
-.voce{transition:background-color .15s}
-.voce:hover{background:rgb(43 76 140 / .06)}
+.voce{transition:box-shadow .15s,background-color .15s}
+.voce:hover,.voce:focus-within{box-shadow:inset 0 -2px 0 var(--blu), 0 2px 0 -1px rgb(43 76 140 / .25);background:rgb(43 76 140 / .035)}
 .voce .quando{font:700 15px/1.35 "Sofia Sans Condensed",sans-serif;letter-spacing:.03em;text-transform:uppercase;color:var(--blu)}
 .voce .cosa{font-weight:500}
 .voce .cosa small{display:block;font-size:15px;font-weight:400;color:var(--testo-2)}
@@ -117,14 +124,19 @@ h1 em{font-style:normal;color:var(--blu)}
 .anno h3{font:800 22px/1.15 "Sofia Sans Condensed",sans-serif}
 .anno .spiega{color:var(--testo-2);font-size:15px;margin-top:4px;max-width:60em}
 .barra{position:relative;display:grid;grid-template-columns:365fr 180fr;margin-top:46px;height:44px;border:1px solid var(--inchiostro)}
-.barra .eser{background:repeating-linear-gradient(90deg, transparent 0 calc(100% / 12 - 1px), var(--colonna) calc(100% / 12 - 1px) calc(100% / 12)), rgb(43 76 140 / .08);position:relative}
+.barra{cursor:crosshair}
+.barra .eser{display:grid;background:rgb(43 76 140 / .08);position:relative}
+.barra .eser i{border-right:1px solid var(--colonna);position:relative}
+.barra .eser i::after{content:attr(data-m);position:absolute;left:0;right:0;top:100%;margin-top:4px;text-align:center;font:700 11px/1 "Sofia Sans Condensed",sans-serif;color:var(--testo-2);font-style:normal}
+.punta{position:absolute;top:-10px;bottom:-10px;width:0;border-left:1px dashed var(--blu);pointer-events:none}
+.lettura{margin-top:40px;min-height:1.55em;font:700 16px/1.4 "Sofia Sans Condensed",sans-serif;letter-spacing:.03em;color:var(--blu)}
 .barra .term{background:repeating-linear-gradient(135deg, transparent 0 6px, rgb(179 54 46 / .18) 6px 7px);border-left:3px double var(--rosso)}
 .barra .lab{position:absolute;bottom:100%;margin-bottom:8px;font:700 13px/1.2 "Sofia Sans Condensed",sans-serif;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap}
 .barra .lab-eser{left:0;color:var(--blu)}
 .barra .lab-term{left:calc(365 / 545 * 100% + 10px);color:var(--rosso)}
 .oggi{position:absolute;top:-6px;bottom:-6px;width:2px;background:var(--inchiostro);left:0;transition:left 1s cubic-bezier(.16,1,.3,1)}
-.oggi span{position:absolute;top:100%;margin-top:6px;transform:translateX(-50%);font:700 13px/1.2 "Sofia Sans Condensed",sans-serif;letter-spacing:.06em;text-transform:uppercase;background:var(--carta);padding:2px 6px;white-space:nowrap}
-.scadenza{margin-top:44px;font-size:17px}
+.oggi span{position:absolute;top:100%;margin-top:20px;transform:translateX(-50%);font:700 13px/1.2 "Sofia Sans Condensed",sans-serif;letter-spacing:.06em;text-transform:uppercase;background:var(--carta);padding:2px 6px;white-space:nowrap}
+.scadenza{margin-top:10px;font-size:17px}
 .scadenza b{color:var(--rosso)}
 
 /* rubrica del team */
@@ -132,6 +144,7 @@ h1 em{font-style:normal;color:var(--blu)}
 .persona .ruolo{font:700 13px/1.35 "Sofia Sans Condensed",sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--blu)}
 .persona .mail{font-size:15px;overflow-wrap:anywhere}
 .persona .tel{font:600 16px/1.35 "Sofia Sans",sans-serif;white-space:nowrap}
+.persona .tel small{display:block;font-size:13px;font-weight:400;color:var(--testo-2)}
 .persona .tel a,.persona .mail a{color:var(--inchiostro)}
 .persona .tel a:hover,.persona .mail a:hover{color:var(--blu)}
 .azioni{display:flex;gap:8px;justify-content:flex-end;flex-wrap:wrap;align-items:center}
@@ -155,12 +168,20 @@ h1 em{font-style:normal;color:var(--blu)}
   .riga > *{grid-column:1/-1 !important;padding:6px 18px}
   .riga > :first-child{padding-top:16px}
   .riga > :last-child{padding-bottom:16px}
-  .intesta{display:none}
-  .riga > span:empty,.voce .nota{display:none}
+  .intesta{display:flex;justify-content:space-between}
+  .intesta > :nth-child(2),.intesta > :nth-child(4){display:none}
+  .riga > span:empty,.voce .nota,.sezione .num{display:none}
+  .voce{grid-template-columns:1fr auto}
+  .voce > :nth-child(1){grid-column:1 !important;grid-row:1}
+  .voce > :nth-child(3){grid-column:2 !important;grid-row:1;text-align:right;padding-top:16px}
+  .voce > :nth-child(2){grid-row:2}
+  .voce > :nth-child(4){grid-row:3}
+  .voce > :nth-child(2):last-child,.voce > :nth-child(2):nth-last-child(2){padding-bottom:16px}
   .testata .logo{grid-column:1/-1}
   .testata nav ul{justify-content:flex-start}
   .apertura > *{padding-top:10px;padding-bottom:10px}
-  .apertura .data{padding-top:32px}
+  .apertura .data{display:none}
+  .apertura > div:nth-child(2){padding-top:32px}
   .saldo{margin:8px 18px 24px;padding:20px 18px !important;border:1px solid var(--colonna)}
   .voce .nota,.tot,.azioni{text-align:left;justify-content:flex-start}
   .sezione > *{padding-top:6px;padding-bottom:6px}
@@ -203,10 +224,15 @@ h1 em{font-style:normal;color:var(--blu)}
 
   <main>
     <section class="riga apertura" aria-labelledby="t-apertura">
-      <p class="data">Bologna<b>3 sedi</b></p>
+      <p class="data">Pag. 01</p>
       <div>
         <h1 id="t-apertura">Il tuo condominio, amministrato <em>a libri aperti</em>.</h1>
         <p class="missione">Promuoviamo una cultura sociale del condominio che riduca i conflitti della vita condominiale. Conti chiari, registri sempre consultabili e un amministratore che si fa vedere.</p>
+        <ul class="sedi-apertura" aria-label="Le tre sedi a Bologna">
+          <li><span>Sede 1</span>Via della Crocetta 6/B<span>40134</span></li>
+          <li><span>Sede 2</span>Via Vasari 30<span>40128</span></li>
+          <li><span>Sede 3</span>Piazza dei Martiri 1<span>40121</span></li>
+        </ul>
       </div>
       <p class="rif">Socio ANACI<b>n° 14718</b></p>
       <form class="saldo" id="preventivo" aria-labelledby="t-prev" novalidate>
@@ -234,7 +260,7 @@ h1 em{font-style:normal;color:var(--blu)}
     <!-- cosa facciamo e quando -->
     <section aria-labelledby="t-ritmo">
       <div class="riga sezione">
-        <p class="num">Ritmo</p>
+        <p class="num">Pag. 02</p>
         <div class="c-2-4"><h2 id="t-ritmo">Cosa facciamo, e quando</h2><p>La trasparenza non è una parola sul sito: è un calendario di cose fatte.</p></div>
       </div>
       <div class="riga voce"><p class="quando">Ogni giorno</p><p class="cosa">Verifichiamo i movimenti del conto del condominio<small>La contabilità è sempre aggiornata.</small></p><p class="codice">CON.06</p><p class="nota">Contabilità</p></div>
@@ -249,11 +275,13 @@ h1 em{font-style:normal;color:var(--blu)}
           <h3 id="t-anno">L'anno del condominio</h3>
           <p class="spiega">Esempio con un esercizio da gennaio a dicembre; ogni condominio ha il suo. Chiuso l'esercizio, la legge dà all'amministratore 180 giorni per convocare l'assemblea che approva il rendiconto.</p>
           <div class="barra" role="img" aria-labelledby="scadenza">
-            <div class="eser"></div><div class="term"></div>
+            <div class="eser" id="mesi"></div><div class="term"></div>
             <span class="lab lab-eser" id="lab-eser">Esercizio · 365 giorni</span>
             <span class="lab lab-term">Rendiconto · 180 giorni</span>
             <span class="oggi" id="oggi" hidden><span>Oggi</span></span>
+            <span class="punta" id="punta" hidden></span>
           </div>
+          <p class="lettura" id="lettura" aria-live="polite"></p>
           <p class="scadenza" id="scadenza">Per un esercizio che chiude il 31 dicembre, l'assemblea per il rendiconto va convocata entro 180 giorni.</p>
         </div>
       </div>
@@ -262,7 +290,7 @@ h1 em{font-style:normal;color:var(--blu)}
     <!-- servizi -->
     <section id="servizi" aria-labelledby="t-servizi">
       <div class="riga sezione">
-        <p class="num">Servizi</p>
+        <p class="num">Pag. 03</p>
         <div class="c-2-4"><h2 id="t-servizi">Tre registri, un solo studio</h2><p>Per i lavori tecnici, legali e fiscali ci avvaliamo di professionisti qualificati, così la manutenzione ordinaria e straordinaria si risolve nel modo giusto.</p></div>
       </div>
 
@@ -294,12 +322,12 @@ h1 em{font-style:normal;color:var(--blu)}
     <!-- team -->
     <section id="team" aria-labelledby="t-team">
       <div class="riga sezione">
-        <p class="num">Rubrica</p>
-        <div class="c-2-4"><h2 id="t-team">Il team</h2><p>Ognuno ha il suo nome e il suo numero. Scrivi direttamente alla persona di riferimento.</p></div>
+        <p class="num">Pag. 04</p>
+        <div class="c-2-4"><h2 id="t-team">Il team</h2><p>Chiama o scrivi direttamente alla persona di riferimento. Per l'amministrazione e la contabilità risponde la linea dello studio.</p></div>
       </div>
-      <div class="riga voce persona"><p class="ruolo">Amministratore</p><div><p class="nome">Mauro Tampellini</p><p class="mail"><a href="mailto:studiotampellini@gmail.com">studiotampellini@gmail.com</a></p></div><p class="tel"><a href="tel:+390514128051">051 412 8051</a></p><div class="azioni"><a class="btn btn-filo" href="tel:+390514128051"><svg aria-hidden="true"><use href="#i-tel"/></svg>Chiama</a><a class="btn btn-filo" href="mailto:studiotampellini@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg>Scrivi</a></div></div>
+      <div class="riga voce persona"><p class="ruolo">Amministratore</p><div><p class="nome">Mauro Tampellini</p><p class="mail"><a href="mailto:studiotampellini@gmail.com">studiotampellini@gmail.com</a></p></div><p class="tel"><a href="tel:+390514128051">051 412 8051</a><small>linea dello studio</small></p><div class="azioni"><a class="btn btn-filo" href="tel:+390514128051"><svg aria-hidden="true"><use href="#i-tel"/></svg>Chiama</a><a class="btn btn-filo" href="mailto:studiotampellini@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg>Scrivi</a></div></div>
       <div class="riga voce persona"><p class="ruolo">Amministratore</p><div><p class="nome">Federico De Blasi</p><p class="mail"><a href="mailto:federico.deblasi@studiotampellini.it">federico.deblasi@studiotampellini.it</a></p></div><p class="tel"><a href="tel:+393279137510">327 913 7510</a></p><div class="azioni"><a class="btn btn-filo" href="tel:+393279137510"><svg aria-hidden="true"><use href="#i-tel"/></svg>Chiama</a><a class="btn btn-filo" href="mailto:federico.deblasi@studiotampellini.it"><svg aria-hidden="true"><use href="#i-mail"/></svg>Scrivi</a></div></div>
-      <div class="riga voce persona"><p class="ruolo">Contabilità</p><div><p class="nome">Giovanna Bigi</p><p class="mail"><a href="mailto:studiotampellini@gmail.com">studiotampellini@gmail.com</a></p></div><p class="tel"><a href="tel:+390514128051">051 412 8051</a></p><div class="azioni"><a class="btn btn-filo" href="tel:+390514128051"><svg aria-hidden="true"><use href="#i-tel"/></svg>Chiama</a><a class="btn btn-filo" href="mailto:studiotampellini@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg>Scrivi</a></div></div>
+      <div class="riga voce persona"><p class="ruolo">Contabilità</p><div><p class="nome">Giovanna Bigi</p><p class="mail"><a href="mailto:studiotampellini@gmail.com">studiotampellini@gmail.com</a></p></div><p class="tel"><a href="tel:+390514128051">051 412 8051</a><small>linea dello studio</small></p><div class="azioni"><a class="btn btn-filo" href="tel:+390514128051"><svg aria-hidden="true"><use href="#i-tel"/></svg>Chiama</a><a class="btn btn-filo" href="mailto:studiotampellini@gmail.com"><svg aria-hidden="true"><use href="#i-mail"/></svg>Scrivi</a></div></div>
       <div class="riga voce persona"><p class="ruolo">Referente</p><div><p class="nome">Clara Tampellini</p><p class="mail"><a href="mailto:clara.tampellini@studiotampellini.it">clara.tampellini@studiotampellini.it</a></p></div><p class="tel"><a href="tel:+393534454152">353 445 4152</a></p><div class="azioni"><a class="btn btn-filo" href="tel:+393534454152"><svg aria-hidden="true"><use href="#i-tel"/></svg>Chiama</a><a class="btn btn-filo" href="mailto:clara.tampellini@studiotampellini.it"><svg aria-hidden="true"><use href="#i-mail"/></svg>Scrivi</a></div></div>
       <div class="riga voce persona chiusa"><p class="ruolo">Referente</p><div><p class="nome">Domenico Faniello</p><p class="mail"><a href="mailto:domenico.faniello@studiotampellini.it">domenico.faniello@studiotampellini.it</a></p></div><p class="tel"><a href="tel:+393513960485">351 396 0485</a></p><div class="azioni"><a class="btn btn-filo" href="tel:+393513960485"><svg aria-hidden="true"><use href="#i-tel"/></svg>Chiama</a><a class="btn btn-filo" href="mailto:domenico.faniello@studiotampellini.it"><svg aria-hidden="true"><use href="#i-mail"/></svg>Scrivi</a></div></div>
     </section>
@@ -307,7 +335,7 @@ h1 em{font-style:normal;color:var(--blu)}
     <!-- documenti -->
     <section id="documenti" aria-labelledby="t-doc">
       <div class="riga sezione">
-        <p class="num">Moduli</p>
+        <p class="num">Pag. 05</p>
         <div class="c-2-4"><h2 id="t-doc">Documenti utili</h2><p>Sei già un condòmino? Scarica il modulo, compilalo e mandalo allo studio.</p></div>
       </div>
       <div class="riga voce doc"><p class="codice">DOC.01</p><p class="cosa">Registro di anagrafe condominiale<small>Modulo per inserire i tuoi dati anagrafici.</small></p><p class="codice">PDF</p><div><a class="btn btn-filo" href="https://www.studiotampellini.com/_files/ugd/91fa84_e90921cc25054b9d84a121b5a64aef4d.pdf" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pdf"/></svg>Scarica</a></div></div>
@@ -320,7 +348,7 @@ h1 em{font-style:normal;color:var(--blu)}
     <!-- sedi -->
     <section id="sedi" aria-labelledby="t-sedi">
       <div class="riga sezione">
-        <p class="num">Sedi</p>
+        <p class="num">Pag. 06</p>
         <div class="c-2-4"><h2 id="t-sedi">Dove siamo</h2><p>Tre sedi a Bologna. Telefono dello studio <a href="tel:+390514128051">051 412 8051</a>.</p></div>
       </div>
       <div class="riga voce"><p class="quando">Sede 1</p><p class="cosa">Via della Crocetta 6/B</p><p class="codice">40134</p><div><a class="btn btn-filo" href="https://www.google.com/maps/search/?api=1&amp;query=Via+della+Crocetta+6B+40134+Bologna" target="_blank" rel="noopener">Apri la mappa</a></div></div>
@@ -370,8 +398,31 @@ h1 em{font-style:normal;color:var(--blu)}
     const fmt = d => d.toLocaleDateString("it-IT", {day:"numeric", month:"long", year:"numeric"});
     const segno = document.getElementById("oggi");
     segno.hidden = false;
-    requestAnimationFrame(() => { segno.style.left = (giorni / 545 * 100).toFixed(2) + "%"; });
+    const tot = Math.round((fine - inizio) / 864e5) + 1 + 180;
+    requestAnimationFrame(() => { segno.style.left = ((giorni - .5) / tot * 100).toFixed(2) + "%"; });
     document.getElementById("lab-eser").textContent = `Esercizio ${anno} · 365 giorni`;
+    // mesi con la loro durata reale
+    const mesi = document.getElementById("mesi"), iniz = "GFMAMGLASOND";
+    const lung = Array.from({length:12}, (_, m) => new Date(anno, m + 1, 0).getDate());
+    const giorniAnno = lung.reduce((a, b) => a + b, 0);
+    mesi.style.gridTemplateColumns = lung.map(g => g + "fr").join(" ");
+    mesi.innerHTML = lung.map((g, m) => `<i data-m="${iniz[m]}"></i>`).join("");
+    const barra = mesi.parentElement, punta = document.getElementById("punta"), lettura = document.getElementById("lettura");
+    const totale = giorniAnno + 180;
+    function leggi(frazione){
+      const g = Math.min(totale - 1, Math.max(0, Math.floor(frazione * totale)));
+      const d = new Date(anno, 0, 1 + g);
+      const testo = g < giorniAnno
+        ? `${fmt(d)}: esercizio ${anno} in corso, verifiche e rate`
+        : `${fmt(d)}: tempo per convocare l'assemblea del rendiconto (giorno ${g - giorniAnno + 1} di 180)`;
+      lettura.textContent = testo;
+    }
+    barra.addEventListener("pointermove", e => {
+      const r = barra.getBoundingClientRect(), f = (e.clientX - r.left) / r.width;
+      punta.hidden = false; punta.style.left = (f * 100) + "%"; leggi(f);
+    });
+    barra.addEventListener("pointerleave", () => { punta.hidden = true; leggi((giorni - 1) / totale); });
+    leggi((giorni - 1) / totale);
     document.getElementById("scadenza").innerHTML = `Oggi siamo al giorno ${giorni} dell'esercizio ${anno}. Il rendiconto ${anno} va portato in assemblea, con convocazione <b>entro il ${fmt(scad)}</b>.`;
   })();
 </script>
