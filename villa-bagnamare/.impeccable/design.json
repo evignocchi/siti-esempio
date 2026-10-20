@@ -1,0 +1,515 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T22:14:02+00:00",
+  "title": "Design System: Villa Bagnamare e MorfeoCentro42",
+  "extensions": {
+    "colorMeta": {
+      "pumice": {
+        "role": "neutral",
+        "displayName": "Pumice",
+        "canonical": "oklch(94.8% 0.007 97)",
+        "tonalRamp": [
+          "#0c0b08",
+          "#262521",
+          "#43423e",
+          "#62615d",
+          "#83827e",
+          "#a6a5a0",
+          "#cac9c4",
+          "#efeee9"
+        ]
+      },
+      "pumice-shade": {
+        "role": "neutral",
+        "displayName": "Pumice Shade",
+        "canonical": "oklch(91.8% 0.010 94)",
+        "tonalRamp": [
+          "#0c0b07",
+          "#272520",
+          "#44423c",
+          "#63615b",
+          "#84827c",
+          "#a7a59e",
+          "#cbc9c2",
+          "#f0eee7"
+        ]
+      },
+      "pumice-stone": {
+        "role": "neutral",
+        "displayName": "Pumice Stone",
+        "canonical": "oklch(84.5% 0.014 93)",
+        "tonalRamp": [
+          "#0d0b05",
+          "#27251d",
+          "#44423a",
+          "#646158",
+          "#858279",
+          "#a8a59b",
+          "#ccc9bf",
+          "#f2eee4"
+        ]
+      },
+      "pumice-thread": {
+        "role": "neutral",
+        "displayName": "Pumice Thread",
+        "canonical": "oklch(78.6% 0.016 90)",
+        "tonalRamp": [
+          "#0e0b04",
+          "#28251c",
+          "#454239",
+          "#656157",
+          "#868278",
+          "#a9a59a",
+          "#cdc9be",
+          "#f2eee3"
+        ]
+      },
+      "turquoise": {
+        "role": "primary",
+        "displayName": "Pumice-Water Turquoise",
+        "canonical": "oklch(65.1% 0.105 195)",
+        "tonalRamp": [
+          "#001518",
+          "#003235",
+          "#005253",
+          "#007373",
+          "#009596",
+          "#41b9b9",
+          "#6bdfde",
+          "#93ffff"
+        ]
+      },
+      "turquoise-deep": {
+        "role": "primary",
+        "displayName": "Deep Lagoon",
+        "canonical": "oklch(44.3% 0.072 200)",
+        "tonalRamp": [
+          "#001217",
+          "#002e33",
+          "#004d51",
+          "#226d71",
+          "#489093",
+          "#6bb3b7",
+          "#90d8dc",
+          "#b5feff"
+        ]
+      },
+      "turquoise-light": {
+        "role": "primary",
+        "displayName": "Shallow Water",
+        "canonical": "oklch(82.8% 0.071 190)",
+        "tonalRamp": [
+          "#001312",
+          "#002f2d",
+          "#004e4b",
+          "#256e6a",
+          "#4a908c",
+          "#6db4af",
+          "#92d9d4",
+          "#b6fff9"
+        ]
+      },
+      "turquoise-ink": {
+        "role": "primary",
+        "displayName": "Lagoon Ink",
+        "canonical": "oklch(24.5% 0.039 201)",
+        "tonalRamp": [
+          "#001012",
+          "#082b2d",
+          "#27484a",
+          "#46686a",
+          "#678a8c",
+          "#89adaf",
+          "#add1d3",
+          "#d1f7f9"
+        ]
+      },
+      "obsidian": {
+        "role": "neutral",
+        "displayName": "Obsidian",
+        "canonical": "oklch(17.2% 0.005 248)",
+        "tonalRamp": [
+          "#090b0d",
+          "#232528",
+          "#404245",
+          "#5f6164",
+          "#808385",
+          "#a2a5a8",
+          "#c6c9cc",
+          "#eceff2"
+        ]
+      },
+      "obsidian-raised": {
+        "role": "neutral",
+        "displayName": "Obsidian Raised",
+        "canonical": "oklch(22.8% 0.010 248)",
+        "tonalRamp": [
+          "#080c0f",
+          "#21262a",
+          "#3e4347",
+          "#5d6267",
+          "#7e8388",
+          "#a0a6ab",
+          "#c4cacf",
+          "#eaeff5"
+        ]
+      },
+      "obsidian-sheen": {
+        "role": "neutral",
+        "displayName": "Obsidian Sheen",
+        "canonical": "oklch(26.5% 0.013 243)",
+        "tonalRamp": [
+          "#070c10",
+          "#20262b",
+          "#3c4348",
+          "#5b6268",
+          "#7c838a",
+          "#9fa6ad",
+          "#c2cad1",
+          "#e8f0f7"
+        ]
+      },
+      "obsidian-core": {
+        "role": "neutral",
+        "displayName": "Obsidian Core",
+        "canonical": "oklch(12.1% 0.004 245)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#242527",
+          "#404244",
+          "#5f6163",
+          "#808384",
+          "#a3a5a7",
+          "#c7c9cb",
+          "#eceff1"
+        ]
+      },
+      "ink": {
+        "role": "neutral",
+        "displayName": "Ink",
+        "canonical": "oklch(19.0% 0.005 248)",
+        "tonalRamp": [
+          "#090b0d",
+          "#232527",
+          "#404245",
+          "#5f6164",
+          "#808385",
+          "#a3a5a8",
+          "#c7c9cc",
+          "#eceff2"
+        ]
+      },
+      "ink-muted": {
+        "role": "neutral",
+        "displayName": "Ink Muted",
+        "canonical": "oklch(42.0% 0.010 92)",
+        "tonalRamp": [
+          "#0d0b07",
+          "#272520",
+          "#44423c",
+          "#63615b",
+          "#84827c",
+          "#a7a59e",
+          "#cbc9c2",
+          "#f1eee7"
+        ]
+      },
+      "slab-text": {
+        "role": "neutral",
+        "displayName": "Slab Text",
+        "canonical": "oklch(94.1% 0.004 236)",
+        "tonalRamp": [
+          "#0a0b0d",
+          "#232527",
+          "#404244",
+          "#5f6263",
+          "#808384",
+          "#a3a5a7",
+          "#c7c9cb",
+          "#eceff1"
+        ]
+      },
+      "slab-muted": {
+        "role": "neutral",
+        "displayName": "Slab Muted",
+        "canonical": "oklch(71.6% 0.017 239)",
+        "tonalRamp": [
+          "#050c12",
+          "#1e262d",
+          "#3a434a",
+          "#59636a",
+          "#79848c",
+          "#9ca7af",
+          "#c0cbd3",
+          "#e5f0f9"
+        ]
+      },
+      "slab-stroke": {
+        "role": "neutral",
+        "displayName": "Slab Stroke",
+        "canonical": "oklch(38.5% 0.017 241)",
+        "tonalRamp": [
+          "#050c12",
+          "#1e262d",
+          "#3a434a",
+          "#59636a",
+          "#7a848c",
+          "#9ca7af",
+          "#c0cbd3",
+          "#e5f0f9"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Property name in the masthead only; uppercase, one line above 640px."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "Section headings, uppercase."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "House names inside their bands, uppercase."
+      },
+      "title-small": {
+        "displayName": "Title small",
+        "purpose": "Flat names in rows, uppercase."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Guest capacity per flat; owners' phone numbers at 24px."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "Running copy, 32-38em measure; 16px below 640px."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Form labels on the slab."
+      },
+      "label-cut": {
+        "displayName": "Label cut",
+        "purpose": "Uppercase row labels (travel list) and footer column heads."
+      },
+      "button": {
+        "displayName": "Button",
+        "purpose": "All button labels."
+      },
+      "caption": {
+        "displayName": "Caption",
+        "purpose": "Plate captions and hero credit."
+      }
+    },
+    "shadows": [
+      {
+        "name": "slab-drop",
+        "value": "0 30px 60px -30px rgb(0 0 0 / .6)",
+        "purpose": "Form slab where it overlaps the photograph."
+      },
+      {
+        "name": "notice-lift",
+        "value": "0 12px 30px -10px rgb(0 0 0 / .5)",
+        "purpose": "Fixed bottom notice."
+      },
+      {
+        "name": "caption-lift",
+        "value": "text-shadow: 0 1px 6px rgb(0 0 0 / .55)",
+        "purpose": "White captions on photographs."
+      },
+      {
+        "name": "horizon-glint",
+        "value": "0 1px 0 rgb(255 255 255 / .25)",
+        "purpose": "Light edge under the horizon line on the photo."
+      },
+      {
+        "name": "obsidian-sheen",
+        "value": "linear-gradient(160deg,#20262b 0%,#0e1012 46%,#050607 100%) + radial-gradient(420px 260px at var(--x) var(--y), rgb(170 190 205 / .16), transparent 60%)",
+        "purpose": "Material gloss of obsidian slabs; the radial highlight follows the pointer on the form slab."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-settle",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Slab settle on flat selection and notice entrance."
+      },
+      {
+        "name": "state-transition",
+        "value": "0.2s",
+        "purpose": "Background, colour and border changes on buttons and fields."
+      },
+      {
+        "name": "slab-settle",
+        "value": "0.7s keyframes: translateY 0 -> -6px -> 0",
+        "purpose": "Acknowledges a flat chosen via an ask button."
+      },
+      {
+        "name": "reduced-motion",
+        "value": "all transitions and animations off; scroll behavior auto",
+        "purpose": "prefers-reduced-motion: reduce."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "sm",
+        "value": "640px"
+      },
+      {
+        "name": "md",
+        "value": "1000px"
+      },
+      {
+        "name": "container",
+        "value": "min(1240px, 100% - 32px)"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Turquoise fill, obsidian label; the single send action (WhatsApp) and the group-booking ask.",
+      "html": "<div class=\"ds-wrap-o\"><button class=\"ds-btn ds-btn-turchese\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z\"/></svg>Invia su WhatsApp</button></div>",
+      "css": ":host{--pomice:#efeee9;--pomice-3:#cfccc2;--turchese:#21a3a3;--turchese-scuro:#0b5f63;--turchese-chiaro:#8fd6d1;--ossidiana:#0e1012;--ossidiana-2:#191d21;--inchiostro:#121416;--testo-2:#4f4d47;}.ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 16px/1 'Hanken Grotesk',sans-serif;border-radius:2px;padding:15px 20px;border:1px solid transparent;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}.ds-btn svg{width:20px;height:20px;flex:none}.ds-btn:focus-visible{outline:2px solid #0b5f63;outline-offset:3px}.ds-wrap-o{background:radial-gradient(420px 260px at 30% 20%,rgb(170 190 205 / .16),transparent 60%),linear-gradient(160deg,#20262b 0%,#0e1012 46%,#050607 100%);padding:24px}.ds-btn-turchese{background:#21a3a3;color:#0e1012}.ds-btn-turchese:hover{background:#8fd6d1}"
+    },
+    {
+      "name": "Ghost Button on Obsidian",
+      "kind": "button",
+      "refersTo": "button-ghost-on-obsidian",
+      "description": "Secondary channel inside obsidian surfaces (email).",
+      "html": "<div class=\"ds-wrap-o\"><button class=\"ds-btn ds-btn-filo\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"1\"/><path d=\"m3.5 6 8.5 7 8.5-7\"/></g></svg>Per email</button></div>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:700 16px/1 'Hanken Grotesk',sans-serif;border-radius:2px;padding:15px 20px;border:1px solid transparent;cursor:pointer;transition:background-color .2s,color .2s,border-color .2s}.ds-btn svg{width:20px;height:20px;flex:none}.ds-btn:focus-visible{outline:2px solid #0b5f63;outline-offset:3px}.ds-wrap-o{background:radial-gradient(420px 260px at 30% 20%,rgb(170 190 205 / .16),transparent 60%),linear-gradient(160deg,#20262b 0%,#0e1012 46%,#050607 100%);padding:24px}.ds-btn-filo{background:transparent;color:#fff;border-color:#56616a}.ds-btn-filo:hover{border-color:#fff}"
+    },
+    {
+      "name": "Ask-per-flat Button",
+      "kind": "button",
+      "refersTo": "button-ask",
+      "description": "Outlined obsidian button at the end of each flat row; fills the availability slab with that flat.",
+      "html": "<button class=\"ds-chiedi\">Chiedi per Eolo 1</button>",
+      "css": ".ds-chiedi{font:700 15px/1 'Hanken Grotesk',sans-serif;border:1px solid #0e1012;background:transparent;color:#0e1012;padding:13px 16px;border-radius:2px;cursor:pointer;white-space:nowrap;transition:background-color .2s,color .2s}.ds-chiedi:hover{background:#0e1012;color:#fff}.ds-chiedi:focus-visible{outline:2px solid #0b5f63;outline-offset:3px}"
+    },
+    {
+      "name": "Slab Field",
+      "kind": "input",
+      "refersTo": "input-slab",
+      "description": "Text/date/select field on obsidian; turquoise-light border on focus.",
+      "html": "<div class=\"ds-wrap-o\"><label class=\"ds-campo\"><span>Arrivo</span><input type=\"date\"></label></div>",
+      "css": ".ds-wrap-o{background:radial-gradient(420px 260px at 30% 20%,rgb(170 190 205 / .16),transparent 60%),linear-gradient(160deg,#20262b 0%,#0e1012 46%,#050607 100%);padding:24px;color:#e9ecee}.ds-campo{display:grid;gap:6px;max-width:260px}.ds-campo span{font:600 13px/1.2 'Hanken Grotesk',sans-serif;letter-spacing:.04em;color:#c4ccd2}.ds-campo input{font:500 16px/1.2 'Hanken Grotesk',sans-serif;color:#fff;background:rgb(255 255 255 / .06);border:1px solid #3c454c;border-radius:2px;padding:12px;color-scheme:dark;transition:border-color .2s,background-color .2s}.ds-campo input:hover{border-color:#5d6870}.ds-campo input:focus{outline:none;border-color:#8fd6d1;background:rgb(255 255 255 / .09)}"
+    },
+    {
+      "name": "Guest Stepper",
+      "kind": "input",
+      "refersTo": "input-slab",
+      "description": "Bordered minus/plus counter for adults and children inside the slab.",
+      "html": "<div class=\"ds-wrap-o\"><div class=\"ds-contatore\"><button type=\"button\" aria-label=\"meno\"><svg viewBox=\"0 0 24 24\"><path d=\"M6 12h12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg></button><output>2</output><button type=\"button\" aria-label=\"più\"><svg viewBox=\"0 0 24 24\"><path d=\"M6 12h12M12 6v12\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"2\" stroke-linecap=\"round\"/></svg></button></div></div>",
+      "css": ".ds-wrap-o{background:radial-gradient(420px 260px at 30% 20%,rgb(170 190 205 / .16),transparent 60%),linear-gradient(160deg,#20262b 0%,#0e1012 46%,#050607 100%);padding:24px}.ds-contatore{display:flex;align-items:center;max-width:220px;border:1px solid #3c454c;border-radius:2px;background:rgb(255 255 255 / .06);color:#fff}.ds-contatore button{width:42px;height:44px;border:0;background:none;color:#fff;cursor:pointer;display:grid;place-items:center}.ds-contatore button svg{width:18px;height:18px}.ds-contatore button:hover{background:rgb(255 255 255 / .08)}.ds-contatore button:focus-visible{outline:2px solid #8fd6d1;outline-offset:-2px}.ds-contatore output{flex:1;text-align:center;font:700 18px/1 'Hanken Grotesk',sans-serif;font-variant-numeric:tabular-nums}"
+    },
+    {
+      "name": "Masthead Navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Cut-caps mark with owners line and a flat anchor list; 1px obsidian underline on hover.",
+      "html": "<header class=\"ds-testata\"><p class=\"ds-marchio\">Affitti diretti<span>dai proprietari, Maria Catena e Agostino</span></p><nav><a href=\"#\">Appartamenti</a><a href=\"#\">Chi siamo</a><a href=\"#\">Come arrivare</a><a href=\"#\">Disponibilità</a></nav></header>",
+      "css": ".ds-testata{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px 32px;padding:18px 16px;background:#efeee9;border-bottom:1px solid #0e1012}.ds-marchio{margin:0;font:700 15px/1.2 'Chakra Petch',sans-serif;letter-spacing:.08em;text-transform:uppercase;color:#0e1012}.ds-marchio span{display:block;font:500 14px/1.2 'Hanken Grotesk',sans-serif;letter-spacing:.04em;text-transform:none;color:#4f4d47}.ds-testata nav{display:flex;flex-wrap:wrap;gap:4px 24px}.ds-testata nav a{color:#121416;text-decoration:none;font:600 15px/1.6 'Hanken Grotesk',sans-serif;padding:6px 0;border-bottom:1px solid transparent}.ds-testata nav a:hover{border-bottom-color:#0e1012}.ds-testata nav a:focus-visible{outline:2px solid #0b5f63;outline-offset:3px}"
+    },
+    {
+      "name": "Distance Chip",
+      "kind": "chip",
+      "refersTo": "chip-distance",
+      "description": "Informational distance tag in house descriptions.",
+      "html": "<ul class=\"ds-distanze\"><li>Porto Pignataro: 300 m</li><li>Spiaggia: 600 m a piedi</li></ul>",
+      "css": ".ds-distanze{list-style:none;margin:0;padding:16px;display:flex;flex-wrap:wrap;gap:8px;background:#efeee9}.ds-distanze li{border:1px solid #cfccc2;border-radius:2px;padding:6px 10px;font:600 14px/1.4 'Hanken Grotesk',sans-serif;color:#121416}"
+    },
+    {
+      "name": "Availability Slab",
+      "kind": "card",
+      "refersTo": "slab-form",
+      "description": "Chamfered obsidian panel with pointer-following sheen; holds the request form.",
+      "html": "<div class=\"ds-lastra\"><h2>Chiedi la disponibilità</h2><p>Rispondiamo noi, Maria Catena e Agostino, con il prezzo per le tue date.</p></div>",
+      "css": ".ds-lastra{width:min(500px,100%);background:radial-gradient(420px 260px at 30% 20%,rgb(170 190 205 / .16),transparent 60%),linear-gradient(160deg,#20262b 0%,#0e1012 46%,#050607 100%);color:#e9ecee;padding:28px 30px 24px;clip-path:polygon(0 3.5%,7% 0,100% 0,100% 88%,95% 100%,0 100%);box-shadow:0 30px 60px -30px rgb(0 0 0 / .6)}.ds-lastra h2{margin:0;font:700 30px/.95 'Chakra Petch',sans-serif;letter-spacing:-.01em;color:#fff}.ds-lastra p{margin:8px 0 0;color:#aab4bb;font:400 15px/1.6 'Hanken Grotesk',sans-serif}"
+    },
+    {
+      "name": "Flat Row",
+      "kind": "custom",
+      "refersTo": "flat-row",
+      "description": "Ruled apartment row: name, capacity numeral, dashed feature list, ask button.",
+      "html": "<article class=\"ds-app\"><div><h4>Eolo 2</h4><p>Bilocale · circa 50 m²</p></div><p class=\"ds-ospiti\">3<small>coppia con un figlio</small></p><ul><li>Cucina in stile eoliano</li><li>Terrazzino privato sul mare</li></ul><button class=\"ds-chiedi\">Chiedi per Eolo 2</button></article>",
+      "css": ".ds-app{display:grid;grid-template-columns:minmax(0,3.2fr) minmax(0,1.4fr) minmax(0,5fr) auto;gap:16px 32px;align-items:start;padding:28px 16px;border-top:1px solid #0e1012;border-bottom:1px solid #cfccc2;background:#efeee9;color:#121416;font:400 16px/1.6 'Hanken Grotesk',sans-serif}.ds-app h4{margin:0;font:700 28px/1 'Chakra Petch',sans-serif;letter-spacing:-.01em;text-transform:uppercase}.ds-app div p{margin:8px 0 0;font-size:14px;font-weight:600}.ds-ospiti{margin:0;font:700 44px/.9 'Chakra Petch',sans-serif;font-variant-numeric:tabular-nums}.ds-ospiti small{display:block;font:600 13px/1.3 'Hanken Grotesk',sans-serif;margin-top:6px}.ds-app ul{margin:0;padding:0;list-style:none;display:grid;gap:4px;color:#4f4d47}.ds-app li{padding-left:16px;position:relative}.ds-app li::before{content:'';position:absolute;left:0;top:.7em;width:7px;height:1px;background:currentColor}.ds-chiedi{align-self:center;font:700 15px/1 'Hanken Grotesk',sans-serif;border:1px solid #0e1012;background:transparent;color:#0e1012;padding:13px 16px;border-radius:2px;cursor:pointer;white-space:nowrap;transition:background-color .2s,color .2s}.ds-chiedi:hover{background:#0e1012;color:#fff}.ds-chiedi:focus-visible{outline:2px solid #0b5f63;outline-offset:3px}"
+    },
+    {
+      "name": "Photo Plate",
+      "kind": "custom",
+      "refersTo": "photo-plate",
+      "description": "Untinted fixed-aspect image with a caption line below (place left, credit right).",
+      "html": "<figure class=\"ds-tavola\"><div class=\"ds-immagine\"></div><figcaption><span>La villa sul lungomare di Marina Lunga</span><span>Ripresa con drone</span></figcaption></figure>",
+      "css": ".ds-tavola{margin:0;max-width:420px;padding:16px;background:#21a3a3}.ds-immagine{aspect-ratio:4/3;background:#191d21}.ds-tavola figcaption{display:flex;justify-content:space-between;gap:12px;margin-top:8px;font:400 13px/1.4 'Hanken Grotesk',sans-serif;color:#032628}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Pumice and Obsidian",
+    "overview": "The system is built from Lipari's own two stones and the water between them. The ground is pumice: a chalky, warm off-white carrying a faint porous grain (an SVG fractal-noise tile at 16% opacity over the page background). Against it sit obsidian slabs: near-black, glossy, with a cold diagonal sheen and edges cut like conchoidal fracture instead of rounded. Turquoise, the colour of the sea over the pumice beds, never decorates. It either owns a whole band (the house on the sea) or marks the one action that sends a request.\n\nStructure comes from one long horizontal line. A 1px obsidian rule runs edge to edge under the masthead, again between the two houses, and across the hero photograph, where it is measured to sit exactly on the sea horizon. Headings are cut, chamfered capitals (Chakra Petch); everything people read or type is a quiet grotesque (Hanken Grotesk). Photographs are shown untinted as plates on a 12-column grid, each with a caption line underneath naming the place and the flat.\n\nDensity is generous and editorial: large uppercase headings, wide bands (72 to 120px vertical), apartments laid out as ruled rows rather than cards. The form is a working instrument, not a teaser, and it lives in the first viewport.",
+    "keyCharacteristics": [
+      "Pumice ground with porous grain; obsidian slabs with a gradient sheen; turquoise in whole bands or on the primary action only.",
+      "One long 1px horizon line as the page's structural rule.",
+      "Faceted clip-path corners on obsidian panels; 2px corners on controls; nothing pill-shaped or soft.",
+      "Chakra Petch uppercase for names, headings and numerals; Hanken Grotesk for body, labels and controls.",
+      "Untinted photo plates with a caption line below.",
+      "Apartments as ruled rows with a large guest-count numeral, never a grid of equal cards."
+    ],
+    "rules": [
+      {
+        "name": "The Whole-Band Rule",
+        "body": "Turquoise appears as a full-width band or as the fill of the single primary action. It is never used for small decorative accents, borders or icons on pumice.",
+        "section": "colors"
+      },
+      {
+        "name": "The Deep-on-Light Rule",
+        "body": "On pumice, turquoise text is always `turquoise-deep`. Plain `turquoise` as text appears only on obsidian.",
+        "section": "colors"
+      },
+      {
+        "name": "The Untinted Plate Rule",
+        "body": "Photographs are never colour-graded, duotoned or overlaid with brand colour. The only overlays permitted are the horizon line and a caption with a soft text-shadow.",
+        "section": "colors"
+      },
+      {
+        "name": "The Cut Caps Rule",
+        "body": "Chakra Petch carries names, headings, numerals and short row labels, almost always in uppercase with tight negative tracking at large sizes. It never sets paragraphs, form fields or button labels.",
+        "section": "typography"
+      },
+      {
+        "name": "The Quiet Reader Rule",
+        "body": "Everything that is read in sentences or typed into is Hanken Grotesk.",
+        "section": "typography"
+      },
+      {
+        "name": "The Gloss-Not-Lift Rule",
+        "body": "Obsidian surfaces read as deep because of their gradient sheen, not because they float. Only the overlapping slab and the transient notice cast shadows.",
+        "section": "elevation"
+      },
+      {
+        "name": "The Conchoidal Edge Rule",
+        "body": "Any obsidian panel gets at least one chamfered corner via clip-path and no border-radius. Anything on pumice or turquoise stays rectilinear at 2px.",
+        "section": "shapes"
+      }
+    ],
+    "dos": [
+      "**Do** keep the page ground pumice with its grain, and let turquoise own a whole band or the one primary action.",
+      "**Do** run the 1px obsidian horizon line full width between major zones, and register it to the real horizon when it crosses a sea photograph.",
+      "**Do** cut every obsidian panel with a clip-path chamfer and give it the 160deg sheen-to-core gradient.",
+      "**Do** set names, headings and capacity numerals in Chakra Petch caps; set copy, labels and controls in Hanken Grotesk.",
+      "**Do** present photographs untinted on the 12-column plate grid with a caption line naming the place or flat.",
+      "**Do** list flats as ruled rows with the guest numeral prominent and an ask button that fills the slab."
+    ],
+    "donts": [
+      "**Don't** set plain `turquoise` as text on pumice; use `turquoise-deep`.",
+      "**Don't** round obsidian panels or soften controls beyond 2px.",
+      "**Don't** tint, duotone or colour-overlay the photographs.",
+      "**Don't** set paragraphs, field text or button labels in Chakra Petch.",
+      "**Don't** add shadows to flat pumice or turquoise surfaces; depth belongs to obsidian."
+    ]
+  }
+}
