@@ -1,0 +1,415 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T22:30:00Z",
+  "title": "Design System: Studio Legale Fusco",
+  "extensions": {
+    "colorMeta": {
+      "carta": {
+        "role": "neutral",
+        "displayName": "Protocol Paper",
+        "canonical": "oklch(97.8% 0.005 106)",
+        "tonalRamp": [
+          "oklch(15% 0.005 106)",
+          "oklch(25% 0.005 106)",
+          "oklch(35% 0.005 106)",
+          "oklch(45% 0.005 106)",
+          "oklch(55% 0.005 106)",
+          "oklch(70% 0.005 106)",
+          "oklch(85% 0.005 106)",
+          "oklch(95% 0.005 106)"
+        ]
+      },
+      "desk": {
+        "role": "neutral",
+        "displayName": "Desk",
+        "canonical": "oklch(93.7% 0.007 124)",
+        "tonalRamp": [
+          "oklch(15% 0.007 124)",
+          "oklch(25% 0.007 124)",
+          "oklch(35% 0.007 124)",
+          "oklch(45% 0.007 124)",
+          "oklch(55% 0.007 124)",
+          "oklch(70% 0.007 124)",
+          "oklch(85% 0.007 124)",
+          "oklch(95% 0.007 124)"
+        ]
+      },
+      "riga": {
+        "role": "neutral",
+        "displayName": "Rule Blue",
+        "canonical": "oklch(86.5% 0.020 250)",
+        "tonalRamp": [
+          "oklch(15% 0.020 250)",
+          "oklch(25% 0.020 250)",
+          "oklch(35% 0.020 250)",
+          "oklch(45% 0.020 250)",
+          "oklch(55% 0.020 250)",
+          "oklch(70% 0.020 250)",
+          "oklch(85% 0.020 250)",
+          "oklch(95% 0.020 250)"
+        ]
+      },
+      "margine": {
+        "role": "secondary",
+        "displayName": "Margin Red",
+        "canonical": "oklch(59.0% 0.170 28)",
+        "tonalRamp": [
+          "oklch(15% 0.170 28)",
+          "oklch(25% 0.160 28)",
+          "oklch(35% 0.160 28)",
+          "oklch(45% 0.160 28)",
+          "oklch(55% 0.160 28)",
+          "oklch(70% 0.160 28)",
+          "oklch(85% 0.160 28)",
+          "oklch(95% 0.160 28)"
+        ]
+      },
+      "inchiostro": {
+        "role": "neutral",
+        "displayName": "Blue-Black Ink",
+        "canonical": "oklch(24.3% 0.033 262)",
+        "tonalRamp": [
+          "oklch(15% 0.033 262)",
+          "oklch(25% 0.033 262)",
+          "oklch(35% 0.033 262)",
+          "oklch(45% 0.033 262)",
+          "oklch(55% 0.033 262)",
+          "oklch(70% 0.033 262)",
+          "oklch(85% 0.033 262)",
+          "oklch(95% 0.033 262)"
+        ]
+      },
+      "testo-2": {
+        "role": "neutral",
+        "displayName": "Second Ink",
+        "canonical": "oklch(43.1% 0.037 265)",
+        "tonalRamp": [
+          "oklch(15% 0.037 265)",
+          "oklch(25% 0.037 265)",
+          "oklch(35% 0.037 265)",
+          "oklch(45% 0.037 265)",
+          "oklch(55% 0.037 265)",
+          "oklch(70% 0.037 265)",
+          "oklch(85% 0.037 265)",
+          "oklch(95% 0.037 265)"
+        ]
+      },
+      "grafite": {
+        "role": "neutral",
+        "displayName": "Graphite",
+        "canonical": "oklch(52.7% 0.030 264)",
+        "tonalRamp": [
+          "oklch(15% 0.030 264)",
+          "oklch(25% 0.030 264)",
+          "oklch(35% 0.030 264)",
+          "oklch(45% 0.030 264)",
+          "oklch(55% 0.030 264)",
+          "oklch(70% 0.030 264)",
+          "oklch(85% 0.030 264)",
+          "oklch(95% 0.030 264)"
+        ]
+      },
+      "numerale": {
+        "role": "neutral",
+        "displayName": "Margin Numeral",
+        "canonical": "oklch(71.6% 0.025 258)",
+        "tonalRamp": [
+          "oklch(15% 0.025 258)",
+          "oklch(25% 0.025 258)",
+          "oklch(35% 0.025 258)",
+          "oklch(45% 0.025 258)",
+          "oklch(55% 0.025 258)",
+          "oklch(70% 0.025 258)",
+          "oklch(85% 0.025 258)",
+          "oklch(95% 0.025 258)"
+        ]
+      },
+      "viola": {
+        "role": "primary",
+        "displayName": "Timbro Violet",
+        "canonical": "oklch(43.2% 0.151 293)",
+        "tonalRamp": [
+          "oklch(15% 0.151 293)",
+          "oklch(25% 0.151 293)",
+          "oklch(35% 0.151 293)",
+          "oklch(45% 0.151 293)",
+          "oklch(55% 0.151 293)",
+          "oklch(70% 0.151 293)",
+          "oklch(85% 0.151 293)",
+          "oklch(95% 0.151 293)"
+        ]
+      },
+      "viola-deep": {
+        "role": "primary",
+        "displayName": "Pressed Violet",
+        "canonical": "oklch(36.5% 0.134 292)",
+        "tonalRamp": [
+          "oklch(15% 0.134 292)",
+          "oklch(25% 0.134 292)",
+          "oklch(35% 0.134 292)",
+          "oklch(45% 0.134 292)",
+          "oklch(55% 0.134 292)",
+          "oklch(70% 0.134 292)",
+          "oklch(85% 0.134 292)",
+          "oklch(95% 0.134 292)"
+        ]
+      },
+      "marca-carta": {
+        "role": "tertiary",
+        "displayName": "Marca Paper",
+        "canonical": "oklch(96.9% 0.020 85)",
+        "tonalRamp": [
+          "oklch(15% 0.020 85)",
+          "oklch(25% 0.020 85)",
+          "oklch(35% 0.020 85)",
+          "oklch(45% 0.020 85)",
+          "oklch(55% 0.020 85)",
+          "oklch(70% 0.020 85)",
+          "oklch(85% 0.020 85)",
+          "oklch(95% 0.020 85)"
+        ]
+      },
+      "marca-verde": {
+        "role": "tertiary",
+        "displayName": "Marca Green",
+        "canonical": "oklch(53.0% 0.080 161)",
+        "tonalRamp": [
+          "oklch(15% 0.080 161)",
+          "oklch(25% 0.080 161)",
+          "oklch(35% 0.080 161)",
+          "oklch(45% 0.080 161)",
+          "oklch(55% 0.080 161)",
+          "oklch(70% 0.080 161)",
+          "oklch(85% 0.080 161)",
+          "oklch(95% 0.080 161)"
+        ]
+      },
+      "marca-rosa": {
+        "role": "tertiary",
+        "displayName": "Marca Rose",
+        "canonical": "oklch(64.6% 0.119 4)",
+        "tonalRamp": [
+          "oklch(15% 0.119 4)",
+          "oklch(25% 0.119 4)",
+          "oklch(35% 0.119 4)",
+          "oklch(45% 0.119 4)",
+          "oklch(55% 0.119 4)",
+          "oklch(70% 0.119 4)",
+          "oklch(85% 0.119 4)",
+          "oklch(95% 0.119 4)"
+        ]
+      },
+      "viola-velo": {
+        "role": "primary",
+        "displayName": "Violet Veil",
+        "canonical": "rgb(86 57 154 / .09)",
+        "tonalRamp": [
+          "oklch(15% 0.151 293)",
+          "oklch(25% 0.151 293)",
+          "oklch(35% 0.151 293)",
+          "oklch(45% 0.151 293)",
+          "oklch(55% 0.151 293)",
+          "oklch(70% 0.151 293)",
+          "oklch(85% 0.151 293)",
+          "oklch(95% 0.151 293)"
+        ]
+      }
+    },
+    "typographyMeta": {
+      "display": {
+        "displayName": "Display",
+        "purpose": "Studio name on line 1 of the first sheet only."
+      },
+      "headline": {
+        "displayName": "Headline",
+        "purpose": "One section title per sheet."
+      },
+      "lead": {
+        "displayName": "Lead",
+        "purpose": "Opening statement, two rules per line; italic for the plain-words phrase."
+      },
+      "title": {
+        "displayName": "Title",
+        "purpose": "Practice-area and form headings."
+      },
+      "body": {
+        "displayName": "Body",
+        "purpose": "All reading text, one rule per line."
+      },
+      "label": {
+        "displayName": "Label",
+        "purpose": "Uppercase field, term and timeline labels; sheet folio."
+      },
+      "nav": {
+        "displayName": "Nav / Control",
+        "purpose": "Menu links and uppercase buttons."
+      },
+      "numeral": {
+        "displayName": "Numeral",
+        "purpose": "Aria-hidden margin line numbers."
+      }
+    },
+    "shadows": [
+      {
+        "name": "sheet-on-desk",
+        "value": "0 1px 0 rgb(0 0 0 / .04), 0 24px 40px -32px rgb(20 30 40 / .35)",
+        "purpose": "Every sheet lying on the desk."
+      },
+      {
+        "name": "object-on-sheet",
+        "value": "0 8px 14px -10px rgb(30 30 40 / .35)",
+        "purpose": "Marca da bollo; portrait print uses 0 8px 16px -10px rgb(20 30 40 / .5)."
+      }
+    ],
+    "motion": [
+      {
+        "name": "ease-settle",
+        "value": "cubic-bezier(.16,1,.3,1)",
+        "purpose": "Placed objects: marca straighten-and-lift (.35s), stamp press (.55s)."
+      },
+      {
+        "name": "state-fade",
+        "value": ".2s",
+        "purpose": "Colour and background changes on links, buttons, problem lines, numerals; legend wash .25s."
+      },
+      {
+        "name": "stamp-press",
+        "value": "keyframes: scale 1 -> .95 (opacity 1, blur .4px) -> 1.02, rotate -12deg, .55s",
+        "purpose": "Timbro press on marca hover/focus."
+      }
+    ],
+    "breakpoints": [
+      {
+        "name": "tablet",
+        "value": "980px"
+      },
+      {
+        "name": "phone",
+        "value": "560px"
+      }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Filled violet form control for the main send action.",
+      "html": "<button class=\"ds-btn ds-btn-pieno\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><path fill=\"currentColor\" d=\"M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2a8.2 8.2 0 0 1-4.2-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Z\"/></svg>Invia su WhatsApp</button>",
+      "css": ":host{--carta:#f8f8f4;--riga:#c9d4e0;--margine:#cf4a3f;--inchiostro:#172030;--testo-2:#465065;--viola:#56399a;--viola-velo:rgb(86 57 154 / .09);--marca-carta:#fbf4e6;--marca-verde:#3d7a5c;--marca-rosa:#c96d86;--r:34px;--m:104px} .ds-btn{display:inline-flex;align-items:center;gap:10px;font:700 16px/1 'Archivo Narrow',sans-serif;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:13px 20px;border:1.5px solid var(--viola);border-radius:2px;cursor:pointer;transition:background-color .2s,color .2s} .ds-btn:focus-visible{outline:2px solid var(--viola);outline-offset:3px} .ds-btn-pieno{background:var(--viola);color:#fff} .ds-btn-pieno:hover{background:#432a7d}"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-outline",
+      "description": "Ink-outlined secondary action beside the primary.",
+      "html": "<button class=\"ds-btn ds-btn-filo\"><svg width=\"18\" height=\"18\" viewBox=\"0 0 24 24\" aria-hidden=\"true\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"1\"/><path d=\"m3.5 6 8.5 7 8.5-7\"/></g></svg>Per email</button>",
+      "css": ":host{--carta:#f8f8f4;--riga:#c9d4e0;--margine:#cf4a3f;--inchiostro:#172030;--testo-2:#465065;--viola:#56399a;--viola-velo:rgb(86 57 154 / .09);--marca-carta:#fbf4e6;--marca-verde:#3d7a5c;--marca-rosa:#c96d86;--r:34px;--m:104px} .ds-btn{display:inline-flex;align-items:center;gap:10px;font:700 16px/1 'Archivo Narrow',sans-serif;letter-spacing:.06em;text-transform:uppercase;text-decoration:none;padding:13px 20px;border:1.5px solid var(--viola);border-radius:2px;cursor:pointer;transition:background-color .2s,color .2s} .ds-btn:focus-visible{outline:2px solid var(--viola);outline-offset:3px} .ds-btn-filo{background:transparent;color:var(--inchiostro);border-color:var(--inchiostro)} .ds-btn-filo:hover{background:rgb(23 32 48 / .06)}"
+    },
+    {
+      "name": "Marca da Bollo",
+      "kind": "custom",
+      "refersTo": "marca-da-bollo",
+      "description": "Perforated revenue stamp that is the call control.",
+      "html": "<a class=\"ds-marca\" href=\"#\"><span class=\"ds-vignetta\"><span class=\"ds-valore\">Prima consulenza</span><span class=\"ds-numero\">0773 489421</span><span class=\"ds-azione\">Chiama lo studio</span><span class=\"ds-orari\">Latina, via Quarto 41</span></span></a>",
+      "css": ":host{--carta:#f8f8f4;--riga:#c9d4e0;--margine:#cf4a3f;--inchiostro:#172030;--testo-2:#465065;--viola:#56399a;--viola-velo:rgb(86 57 154 / .09);--marca-carta:#fbf4e6;--marca-verde:#3d7a5c;--marca-rosa:#c96d86;--r:34px;--m:104px} .ds-marca{display:block;width:236px;padding:16px;text-decoration:none;background:radial-gradient(circle at 50% 0,var(--carta) 4.5px,#0000 5px) 0 0/12px 10px repeat-x,radial-gradient(circle at 50% 100%,var(--carta) 4.5px,#0000 5px) 0 100%/12px 10px repeat-x,radial-gradient(circle at 0 50%,var(--carta) 4.5px,#0000 5px) 0 0/10px 12px repeat-y,radial-gradient(circle at 100% 50%,var(--carta) 4.5px,#0000 5px) 100% 0/10px 12px repeat-y,var(--marca-carta);box-shadow:0 8px 14px -10px rgb(30 30 40 / .35);transform:rotate(1.6deg);transition:transform .35s cubic-bezier(.16,1,.3,1)} .ds-marca:hover{transform:rotate(0) translateY(-3px)} .ds-marca:focus-visible{outline:2px solid var(--viola);outline-offset:3px} .ds-vignetta{display:block;border:1.5px solid var(--marca-verde);padding:14px 12px 12px;text-align:center;background:repeating-linear-gradient(45deg,rgb(61 122 92 / .08) 0 1px,transparent 1px 4px),repeating-linear-gradient(-45deg,rgb(201 109 134 / .08) 0 1px,transparent 1px 4px),var(--marca-carta)} .ds-valore{font:700 13px/1.2 'Archivo Narrow',sans-serif;letter-spacing:.16em;text-transform:uppercase;color:var(--marca-verde)} .ds-numero{display:block;font:700 30px/1.1 'Archivo Narrow',sans-serif;color:#1f2b25;margin:10px 0 6px;font-variant-numeric:tabular-nums} .ds-azione{display:block;font:600 14px/1.3 'Archivo Narrow',sans-serif;letter-spacing:.06em;text-transform:uppercase;color:#1f2b25} .ds-orari{display:block;font:italic 400 14px/1.4 'Libre Caslon Text',serif;color:#4b5a52;margin-top:8px}"
+    },
+    {
+      "name": "Timbro",
+      "kind": "custom",
+      "refersTo": "timbro",
+      "description": "The single round violet rubber stamp, multiplied onto the paper.",
+      "html": "<svg class=\"ds-timbro\" viewBox=\"0 0 200 200\" aria-hidden=\"true\"><defs><path id=\"ds-giro\" d=\"M100 100m-74 0a74 74 0 1 1 148 0a74 74 0 1 1-148 0\"/></defs><g fill=\"none\" stroke=\"currentColor\"><circle cx=\"100\" cy=\"100\" r=\"94\" stroke-width=\"3.2\"/><circle cx=\"100\" cy=\"100\" r=\"88\" stroke-width=\"1.2\"/><circle cx=\"100\" cy=\"100\" r=\"58\" stroke-width=\"1.6\"/></g><text fill=\"currentColor\" font-family=\"Archivo Narrow, sans-serif\" font-weight=\"700\" font-size=\"16\" letter-spacing=\"2.2\"><textPath href=\"#ds-giro\">STUDIO LEGALE FUSCO · VIA QUARTO 41 · LATINA ·</textPath></text><text x=\"100\" y=\"94\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"Libre Caslon Text, serif\" font-size=\"17\">Avv.</text><text x=\"100\" y=\"116\" text-anchor=\"middle\" fill=\"currentColor\" font-family=\"Libre Caslon Text, serif\" font-size=\"17\">L. Fusco</text></svg>",
+      "css": ":host{--carta:#f8f8f4;--riga:#c9d4e0;--margine:#cf4a3f;--inchiostro:#172030;--testo-2:#465065;--viola:#56399a;--viola-velo:rgb(86 57 154 / .09);--marca-carta:#fbf4e6;--marca-verde:#3d7a5c;--marca-rosa:#c96d86;--r:34px;--m:104px} .ds-timbro{width:140px;height:140px;color:var(--viola);transform:rotate(-12deg);opacity:.86;mix-blend-mode:multiply;transition:transform .5s cubic-bezier(.16,1,.3,1)} .ds-timbro:hover{transform:rotate(-12deg) scale(.95);opacity:1}"
+    },
+    {
+      "name": "Problem Line",
+      "kind": "custom",
+      "refersTo": "problem-line",
+      "description": "Plain-words problem link on a rule, keyed by a short label; hover washes it violet.",
+      "html": "<ul class=\"ds-problemi\"><li><a href=\"#\"><span class=\"ds-rif\">Famiglia</span>Ti stai separando o divorziando</a></li><li><a href=\"#\"><span class=\"ds-rif\">Condominio</span>Non sei d'accordo con una delibera del condominio</a></li></ul>",
+      "css": ":host{--carta:#f8f8f4;--riga:#c9d4e0;--margine:#cf4a3f;--inchiostro:#172030;--testo-2:#465065;--viola:#56399a;--viola-velo:rgb(86 57 154 / .09);--marca-carta:#fbf4e6;--marca-verde:#3d7a5c;--marca-rosa:#c96d86;--r:34px;--m:104px} .ds-problemi{list-style:none;margin:0;padding:0;background:var(--carta) repeating-linear-gradient(180deg,transparent 0 calc(var(--r) - 1px),var(--riga) calc(var(--r) - 1px) var(--r))} .ds-problemi a{display:flex;gap:14px;align-items:baseline;color:var(--inchiostro);text-decoration:none;font:400 18px/var(--r) 'Libre Caslon Text',Georgia,serif;padding:0 6px;border-radius:2px;transition:background-color .2s} .ds-problemi a:hover,.ds-problemi a:focus-visible{background:var(--viola-velo)} .ds-problemi a:focus-visible{outline:2px solid var(--viola);outline-offset:3px} .ds-rif{font:600 13px/var(--r) 'Archivo Narrow',sans-serif;letter-spacing:.06em;color:#626b7d;min-width:5.5em} .ds-problemi a:hover .ds-rif{color:var(--inchiostro)}"
+    },
+    {
+      "name": "Ruled Field",
+      "kind": "input",
+      "refersTo": "field-ruled",
+      "description": "Label plus underlined select and a textarea ruled at the pitch.",
+      "html": "<div class=\"ds-campo\"><label class=\"ds-label\">Di cosa si tratta</label><select class=\"ds-select\"><option>Condominio</option></select><label class=\"ds-label\">In breve</label><textarea class=\"ds-area\" rows=\"3\"></textarea></div>",
+      "css": ":host{--carta:#f8f8f4;--riga:#c9d4e0;--margine:#cf4a3f;--inchiostro:#172030;--testo-2:#465065;--viola:#56399a;--viola-velo:rgb(86 57 154 / .09);--marca-carta:#fbf4e6;--marca-verde:#3d7a5c;--marca-rosa:#c96d86;--r:34px;--m:104px} .ds-campo{width:320px} .ds-label{display:block;font:600 13px/var(--r) 'Archivo Narrow',sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--testo-2)} .ds-select,.ds-area{display:block;width:100%;font:400 17px/var(--r) 'Libre Caslon Text',serif;color:var(--inchiostro);background:transparent;border:0;border-bottom:1px solid var(--inchiostro);border-radius:0;padding:0 2px;min-height:var(--r)} .ds-area{resize:vertical;height:calc(var(--r) * 3);border-bottom:0;background:repeating-linear-gradient(180deg,transparent 0 calc(var(--r) - 1px),var(--riga) calc(var(--r) - 1px) var(--r))} .ds-select:focus,.ds-area:focus{outline:2px solid var(--viola);outline-offset:2px}"
+    },
+    {
+      "name": "Navigation",
+      "kind": "nav",
+      "refersTo": "nav",
+      "description": "Three narrow links on line 1 of the first sheet.",
+      "html": "<ul class=\"ds-menu\"><li><a href=\"#\">Di cosa mi occupo</a></li><li><a href=\"#\">Chi sono</a></li><li><a href=\"#\">Contatti</a></li></ul>",
+      "css": ":host{--carta:#f8f8f4;--riga:#c9d4e0;--margine:#cf4a3f;--inchiostro:#172030;--testo-2:#465065;--viola:#56399a;--viola-velo:rgb(86 57 154 / .09);--marca-carta:#fbf4e6;--marca-verde:#3d7a5c;--marca-rosa:#c96d86;--r:34px;--m:104px} .ds-menu{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:0 24px;font:600 16px/var(--r) 'Archivo Narrow',sans-serif;letter-spacing:.04em} .ds-menu a{color:var(--inchiostro);text-decoration:none;border-bottom:1px solid transparent} .ds-menu a:hover{border-bottom-color:var(--inchiostro)} .ds-menu a:focus-visible{outline:2px solid var(--viola);outline-offset:3px}"
+    },
+    {
+      "name": "Sheet",
+      "kind": "card",
+      "refersTo": "sheet",
+      "description": "Ruled protocol sheet with double red margin, line numerals and folio.",
+      "html": "<section class=\"ds-foglio\" data-foglio=\"Foglio 1 di 4\"><ol class=\"ds-numeri\" aria-hidden=\"true\"><li>1</li><li>2</li><li>3</li></ol><p class=\"ds-testo\">Ogni pratica la seguo io, dal primo colloquio alla fine.</p></section>",
+      "css": ":host{--carta:#f8f8f4;--riga:#c9d4e0;--margine:#cf4a3f;--inchiostro:#172030;--testo-2:#465065;--viola:#56399a;--viola-velo:rgb(86 57 154 / .09);--marca-carta:#fbf4e6;--marca-verde:#3d7a5c;--marca-rosa:#c96d86;--r:34px;--m:104px} .ds-foglio{position:relative;width:520px;background-color:var(--carta);background-image:linear-gradient(90deg,transparent calc(var(--m) - 7px),var(--margine) calc(var(--m) - 7px),var(--margine) calc(var(--m) - 6px),transparent calc(var(--m) - 6px),transparent calc(var(--m) - 2px),var(--margine) calc(var(--m) - 2px),var(--margine) calc(var(--m) - 1px),transparent calc(var(--m) - 1px)),repeating-linear-gradient(180deg,transparent 0 calc(var(--r) - 1px),var(--riga) calc(var(--r) - 1px) var(--r));background-position:0 0,0 calc(var(--r) * 2);padding:calc(var(--r) * 2 + 7px) 48px calc(var(--r) * 2 - 7px) calc(var(--m) + 32px);box-shadow:0 1px 0 rgb(0 0 0 / .04),0 24px 40px -32px rgb(20 30 40 / .35)} .ds-foglio::before{content:attr(data-foglio);position:absolute;top:calc(var(--r) * .6);right:48px;font:600 13px/1 'Archivo Narrow',sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#626b7d} .ds-numeri{position:absolute;left:0;top:calc(var(--r) * 2 + 7px);width:calc(var(--m) - 18px);margin:0;padding:0;list-style:none;text-align:right;font:500 12px/var(--r) 'Archivo Narrow',sans-serif;color:#9aa4b3;font-variant-numeric:tabular-nums} .ds-testo{margin:0;font:400 18px/var(--r) 'Libre Caslon Text',Georgia,serif;color:var(--inchiostro)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "Il Foglio Uso Bollo",
+    "overview": "Every surface is a sheet of Italian protocol paper: off-white, ruled in faint blue at a fixed pitch, with a double red margin line on the left and small line numerals counted down the margin. Text is written onto the rules in a legal book serif, never floated over them. Sheets sit on a grey-green desk, one after another, each with its own folio in the top right corner. The single active colour is a violet stamp ink; everything that can be pressed, hovered or focused speaks in it, and nothing decorative does.\n\nDensity is calm and document-like: generous left margin, a two-column reading layout inside each sheet, plain words. Objects from the world of legal paperwork carry the interactive weight: the call control is a perforated marca da bollo with guilloche ground, the address is a round rubber stamp overlapping it, the portrait is clipped to the sheet with a paperclip. These objects are slightly rotated, as if placed by hand; the sheet itself is never rotated.\n\nThe confirmed visual rejection is the navy courtroom-photo hero with columns and scales of justice. The world answers sobriety with stationery, not with institutional iconography.",
+    "keyCharacteristics": [
+      "Ruled paper at a 34px pitch (32px on phones); every line of text lands on that rhythm.",
+      "A double red margin line and right-aligned line numerals in the margin.",
+      "One active ink, violet, for actions, focus, selection and highlights.",
+      "Paperwork objects (marca da bollo, rubber stamp, paperclip) as the expressive components, slightly rotated.",
+      "Book serif for reading, a narrow grotesque for labels, numerals and controls."
+    ],
+    "rules": [
+      {
+        "name": "The One Stamp Rule",
+        "body": "Violet is the only active ink. If an element does not act, respond to a pointer, or show focus, it is not violet. There is exactly one rubber stamp per page.",
+        "section": "colors"
+      },
+      {
+        "name": "The Marca Palette Stays in the Marca Rule",
+        "body": "Green and rose exist only inside the marca da bollo; they never leak into buttons, links or headings.",
+        "section": "colors"
+      },
+      {
+        "name": "The Numeral Is Ornament Rule",
+        "body": "Margin Numeral is too faint for words; use it only for the aria-hidden line numbers. Any readable label uses Graphite or Second Ink.",
+        "section": "colors"
+      },
+      {
+        "name": "The On-the-Rule Rule",
+        "body": "Every line-height is the rule pitch or a whole multiple of it (34px, 68px, 102px). Display sizes take two rules; nothing sits between lines.",
+        "section": "typography"
+      },
+      {
+        "name": "The Serif Speaks, the Narrow Labels Rule",
+        "body": "Sentences addressed to the client are always Caslon; Archivo Narrow never carries a full sentence.",
+        "section": "typography"
+      },
+      {
+        "name": "The Placed-by-Hand Rule",
+        "body": "Objects on the sheet (stamp, revenue stamp, portrait) may rotate between −12° and +2.2°; the sheet, its text and its controls never rotate.",
+        "section": "elevation"
+      }
+    ],
+    "dos": [
+      "Do set every line on the rule pitch (34px, 32px under 560px) and give display type exactly two rules.",
+      "Do keep violet for what acts: buttons, focus, selection, lit numerals, hover veils, the one stamp.",
+      "Do express new interactive emphasis as a paperwork object (stamp, marca, clip, tab) before reaching for a generic card.",
+      "Do keep icons as inline stroked SVG at 18px, coloured in Second Ink or inheriting the control colour.",
+      "Do honour reduced motion: transitions and the stamp press both stop."
+    ],
+    "donts": [
+      "Don't use the navy courtroom-photo hero, classical columns or scales of justice.",
+      "Don't add a second stamp, a second accent hue, or use the marca's green and rose outside the marca.",
+      "Don't rotate the sheet, body text or buttons; only placed objects tilt.",
+      "Don't use hard or offset shadows, or round the sheet, panels or fields.",
+      "Don't set readable text in Margin Numeral."
+    ]
+  }
+}

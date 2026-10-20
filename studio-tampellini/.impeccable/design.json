@@ -1,0 +1,140 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-10-20T22:15:00Z",
+  "title": "Design System: Studio Tampellini",
+  "extensions": {
+    "colorMeta": {
+      "inchiostro":  { "role": "neutral",   "displayName": "Ledger Ink",      "canonical": "#23221e", "tonalRamp": ["#151412", "#23221e", "#3a3832", "#55524a", "#737067", "#959189", "#bdbab2", "#e6e4de"] },
+      "blu":         { "role": "primary",   "displayName": "Ruling Blue",     "canonical": "#2b4c8c", "tonalRamp": ["#101d38", "#1d3870", "#2b4c8c", "#4467a8", "#6a88c0", "#97aed6", "#c5d3ea", "#e9eef7"] },
+      "blu-deep":    { "role": "primary",   "displayName": "Pressed Blue",    "canonical": "#1d3870", "tonalRamp": ["#0b1630", "#142a57", "#1d3870", "#30508c", "#5573ab", "#8399c8", "#b8c5e2", "#e5eaf5"] },
+      "rosso":       { "role": "secondary", "displayName": "Closing Red",     "canonical": "#b3362e", "tonalRamp": ["#3d110e", "#6b1f1a", "#922b24", "#b3362e", "#cc5a50", "#de8a82", "#edbcb7", "#f8e6e4"] },
+      "carta":       { "role": "neutral",   "displayName": "Ledger Paper",    "canonical": "#edf1e8", "tonalRamp": ["#2b3027", "#474e42", "#68715f", "#8e977f", "#b4bca8", "#d2d9c8", "#edf1e8", "#f8faf5"] },
+      "carta-2":     { "role": "neutral",   "displayName": "Desk Paper",      "canonical": "#e2e8db", "tonalRamp": ["#282e24", "#434b3d", "#636d5a", "#89937d", "#adb6a1", "#cbd3c1", "#e2e8db", "#f3f6ef"] },
+      "colonna":     { "role": "neutral",   "displayName": "Column Green",    "canonical": "#a3c2a9", "tonalRamp": ["#1c2b1f", "#324a37", "#4c6b52", "#6a8d70", "#88a98e", "#a3c2a9", "#c8dccb", "#ebf3ec"] },
+      "riga":        { "role": "neutral",   "displayName": "Row Hairline",    "canonical": "#d2dccf", "tonalRamp": ["#262e24", "#414c3e", "#5f6d5b", "#83917e", "#a8b5a4", "#d2dccf", "#e4ebe2", "#f4f7f3"] },
+      "testo-2":     { "role": "neutral",   "displayName": "Faded Ink",       "canonical": "#4c5047", "tonalRamp": ["#1c1e1a", "#33362f", "#4c5047", "#666b60", "#83887c", "#a3a79c", "#c7cac1", "#ebece7"] },
+      "placeholder": { "role": "neutral",   "displayName": "Placeholder Ink", "canonical": "#5f6459", "tonalRamp": ["#1e201c", "#363931", "#4c5047", "#5f6459", "#7d8276", "#a0a498", "#c6c9bf", "#ebece7"] }
+    },
+    "typographyMeta": {
+      "display":    { "displayName": "Display",    "purpose": "The opening statement only; emphasised phrase in Ruling Blue, no italics." },
+      "headline":   { "displayName": "Headline",   "purpose": "Section-head rows." },
+      "title":      { "displayName": "Title",      "purpose": "Register titles and the timeline title; Saldo heading at 26px, person names at 20px." },
+      "body":       { "displayName": "Body",       "purpose": "Entry descriptions (weight 500) and section intros; tabular figures on." },
+      "body-small": { "displayName": "Body small", "purpose": "Explanatory line under an entry, contact sub-lines, footer." },
+      "label":      { "displayName": "Label",      "purpose": "Column heads, uppercase; the same condensed uppercase family serves field labels, times, roles and folios." },
+      "code":       { "displayName": "Code",       "purpose": "Rif. codes such as ORD.01 and DOC.03." }
+    },
+    "shadows": [
+      { "name": "sheet", "value": "0 30px 50px -40px rgb(30 40 30 / .45)", "purpose": "Only under the register sheet lying on the desk." },
+      { "name": "row-ruler", "value": "inset 0 -2px 0 var(--blu)", "purpose": "Ruler laid along a hovered or focused ledger row, with a rgb(43 76 140 / .035) wash. A state, not elevation." }
+    ],
+    "rules": [
+      { "name": "column-rule", "value": "1px solid var(--colonna)", "purpose": "Vertical ledger column rules." },
+      { "name": "row-hairline", "value": "1px solid var(--riga)", "purpose": "Under every row." },
+      { "name": "head-rule", "value": "3px double var(--blu)", "purpose": "Under the column head; left edge of the Saldo column; left edge of the sheet on mobile." },
+      { "name": "closing-rule", "value": "3px double var(--rosso)", "purpose": "Closes every block of rows and the Saldo total." }
+    ],
+    "motion": [
+      { "name": "button-state", "value": "background-color .2s, color .2s", "purpose": "Button hover fills." },
+      { "name": "row-ruler", "value": "box-shadow .15s, background-color .15s", "purpose": "Row ruler on hover and focus-within." },
+      { "name": "today-marker", "value": "left 1s cubic-bezier(.16,1,.3,1)", "purpose": "Timeline 'today' marker easing into place." },
+      { "name": "reduced-motion", "value": "transition: none; scroll-behavior: auto", "purpose": "All transitions removed under prefers-reduced-motion." }
+    ],
+    "breakpoints": [
+      { "name": "narrow-columns", "value": "1100px" },
+      { "name": "stacked-rows", "value": "900px" },
+      { "name": "small", "value": "520px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Full-width blue fill; used once, for the quote request on the red closing rule of the Saldo column.",
+      "html": "<button class=\"ds-btn ds-btn-pieno\" type=\"button\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linejoin=\"round\"><rect x=\"3\" y=\"5\" width=\"18\" height=\"14\" rx=\"1\"/><path d=\"m3.5 6 8.5 7 8.5-7\"/></g></svg>Invia la richiesta</button>",
+      "css": ".ds-btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:800 17px/1 \"Sofia Sans Condensed\",sans-serif;letter-spacing:.04em;text-decoration:none;border-radius:2px;padding:14px 18px;border:1.5px solid #2b4c8c;cursor:pointer;transition:background-color .2s,color .2s}.ds-btn svg{width:20px;height:20px;flex:none}.ds-btn-pieno{background:#2b4c8c;color:#fff;width:100%}.ds-btn-pieno:hover{background:#1d3870}.ds-btn:focus-visible{outline:2px solid #2b4c8c;outline-offset:2px}"
+    },
+    {
+      "name": "Outline Button",
+      "kind": "button",
+      "refersTo": "button-filo",
+      "description": "Blue-ruled outline action for Chiama, Scrivi, Scarica, Apri la mappa; fills blue on hover.",
+      "html": "<a class=\"ds-btn-filo\" href=\"#\"><svg viewBox=\"0 0 24 24\" aria-hidden=\"true\"><g fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.8\" stroke-linecap=\"round\" stroke-linejoin=\"round\"><path d=\"M14 3H6v18h12V7l-4-4Z\"/><path d=\"M14 3v4h4M12 11v6m-3-3 3 3 3-3\"/></g></svg>Scarica</a>",
+      "css": ".ds-btn-filo{display:inline-flex;align-items:center;justify-content:center;gap:10px;font:800 17px/1 \"Sofia Sans Condensed\",sans-serif;letter-spacing:.04em;text-decoration:none;border-radius:2px;padding:14px 18px;border:1.5px solid #2b4c8c;background:transparent;color:#2b4c8c;transition:background-color .2s,color .2s}.ds-btn-filo svg{width:20px;height:20px;flex:none}.ds-btn-filo:hover{background:#2b4c8c;color:#fff}.ds-btn-filo:focus-visible{outline:2px solid #2b4c8c;outline-offset:2px}"
+    },
+    {
+      "name": "Ruled Field",
+      "kind": "input",
+      "refersTo": "input-ruled",
+      "description": "Written-on-the-line field: ink underline, blue 2px on focus, red when invalid.",
+      "html": "<div class=\"ds-campo\"><label for=\"ds-ind\">Indirizzo del condominio</label><input id=\"ds-ind\" placeholder=\"Via e numero, Bologna\"></div>",
+      "css": ".ds-campo{display:grid;gap:4px;background:#edf1e8;padding:16px}.ds-campo label{font:700 12px/1.2 \"Sofia Sans Condensed\",sans-serif;letter-spacing:.12em;text-transform:uppercase;color:#4c5047}.ds-campo input{width:100%;font:500 17px/1.3 \"Sofia Sans\",sans-serif;color:#23221e;background:transparent;border:0;border-bottom:1px solid #23221e;border-radius:0;padding:6px 2px;caret-color:#2b4c8c}.ds-campo input::placeholder{color:#5f6459;opacity:1}.ds-campo input:focus{outline:none;border-bottom:2px solid #2b4c8c;padding-bottom:5px}.ds-campo input[aria-invalid=\"true\"]{border-bottom-color:#b3362e}"
+    },
+    {
+      "name": "Header Navigation",
+      "kind": "nav",
+      "refersTo": null,
+      "description": "Condensed bold ink links, right-aligned in the header row; blue with a blue underline on hover.",
+      "html": "<nav class=\"ds-nav\"><ul><li><a href=\"#\">Servizi</a></li><li><a href=\"#\">Il team</a></li><li><a href=\"#\">Documenti</a></li><li><a href=\"#\">Sedi e contatti</a></li></ul></nav>",
+      "css": ".ds-nav{background:#edf1e8;padding:18px 20px}.ds-nav ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;justify-content:flex-end;gap:2px 22px;font:700 16px/1.4 \"Sofia Sans Condensed\",sans-serif;letter-spacing:.04em}.ds-nav a{color:#23221e;text-decoration:none;border-bottom:1px solid transparent}.ds-nav a:hover{color:#2b4c8c;border-bottom-color:#2b4c8c}.ds-nav a:focus-visible{outline:2px solid #2b4c8c;outline-offset:2px}"
+    },
+    {
+      "name": "Column Head",
+      "kind": "custom",
+      "refersTo": "column-head",
+      "description": "Sticky row of ledger column labels ruled off with the blue double rule.",
+      "html": "<div class=\"ds-intesta\"><span>Data</span><span>Causale</span><span>Rif.</span><span>Saldo</span></div>",
+      "css": ".ds-intesta{display:grid;grid-template-columns:150px 1fr 132px 340px;background:#edf1e8;border-bottom:3px double #2b4c8c}.ds-intesta>*{padding:10px 20px;font:700 13px/1.2 \"Sofia Sans Condensed\",sans-serif;letter-spacing:.14em;text-transform:uppercase;color:#2b4c8c}.ds-intesta>*+*{border-left:1px solid #a3c2a9}.ds-intesta>:last-child{text-align:right;border-left:3px double #2b4c8c}"
+    },
+    {
+      "name": "Ledger Row",
+      "kind": "custom",
+      "refersTo": "ledger-row",
+      "description": "The unit of the system: Data, Causale, Rif., Saldo; ruler on hover; the last row of a block closes with the red double rule and a count.",
+      "html": "<div class=\"ds-riga\" tabindex=\"0\"><p class=\"ds-quando\">Ogni giorno</p><p class=\"ds-cosa\">Verifichiamo i movimenti del conto<small>La contabilità è sempre aggiornata.</small></p><p class=\"ds-codice\">CON.06</p><p class=\"ds-nota\">Contabilità</p></div><div class=\"ds-riga ds-chiusa\"><span></span><p class=\"ds-cosa\">Esecuzione delle delibere dell'assemblea</p><p class=\"ds-codice\">ORD.07</p><p class=\"ds-tot\">Voci <b>7</b></p></div>",
+      "css": ".ds-riga{display:grid;grid-template-columns:150px 1fr 132px 240px;background:#edf1e8;color:#23221e;border-bottom:1px solid #d2dccf;font:400 17px/1.55 \"Sofia Sans\",sans-serif;font-variant-numeric:tabular-nums;transition:box-shadow .15s,background-color .15s}.ds-riga>*{margin:0;padding:14px 20px;min-width:0}.ds-riga>*+*{border-left:1px solid #a3c2a9}.ds-riga>:last-child{border-left:3px double #2b4c8c}.ds-riga:hover,.ds-riga:focus-within,.ds-riga:focus-visible{outline:none;box-shadow:inset 0 -2px 0 #2b4c8c;background:rgb(43 76 140 / .035)}.ds-chiusa{border-bottom:3px double #b3362e}.ds-quando{font:700 15px/1.35 \"Sofia Sans Condensed\",sans-serif;letter-spacing:.03em;text-transform:uppercase;color:#2b4c8c}.ds-cosa{font-weight:500}.ds-cosa small{display:block;font-size:15px;font-weight:400;color:#4c5047}.ds-codice{font:600 14px/1.35 \"Sofia Sans Condensed\",sans-serif;letter-spacing:.06em;color:#4c5047}.ds-nota{font-size:14px;color:#4c5047;text-align:right}.ds-tot{font:800 15px/1.3 \"Sofia Sans Condensed\",sans-serif;letter-spacing:.08em;text-transform:uppercase;text-align:right}.ds-tot b{font-size:22px;margin-left:8px;letter-spacing:0}"
+    },
+    {
+      "name": "Condominium-Year Timeline",
+      "kind": "custom",
+      "refersTo": null,
+      "description": "Bar whose segments equal real time: 365-day exercise in true month lengths, then a hatched red 180-day stretch; ink marker for today.",
+      "html": "<div class=\"ds-anno\"><div class=\"ds-barra\"><div class=\"ds-eser\"><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i><i></i></div><div class=\"ds-term\"></div><span class=\"ds-lab\">Esercizio · 365 giorni</span><span class=\"ds-lab ds-lab-term\">Rendiconto · 180 giorni</span><span class=\"ds-oggi\"></span></div></div>",
+      "css": ".ds-anno{background:#edf1e8;padding:46px 20px 24px}.ds-barra{position:relative;display:grid;grid-template-columns:365fr 180fr;height:44px;border:1px solid #23221e;cursor:crosshair}.ds-eser{display:grid;grid-template-columns:31fr 28fr 31fr 30fr 31fr 30fr 31fr 31fr 30fr 31fr 30fr 31fr;background:rgb(43 76 140 / .08)}.ds-eser i{border-right:1px solid #a3c2a9}.ds-term{background:repeating-linear-gradient(135deg,transparent 0 6px,rgb(179 54 46 / .18) 6px 7px);border-left:3px double #b3362e}.ds-lab{position:absolute;bottom:100%;left:0;margin-bottom:8px;font:700 13px/1.2 \"Sofia Sans Condensed\",sans-serif;letter-spacing:.08em;text-transform:uppercase;white-space:nowrap;color:#2b4c8c}.ds-lab-term{left:calc(365 / 545 * 100% + 10px);color:#b3362e}.ds-oggi{position:absolute;top:-6px;bottom:-6px;left:44%;width:2px;background:#23221e;transition:left 1s cubic-bezier(.16,1,.3,1)}"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Open Ledger",
+    "overview": "The site is a single partitario page laid on a darker desk. A pale green-grey sheet carries fine green column rules for Data, Causale, Rif. and Saldo; a blue double rule marks the column head and the Saldo column; a red double rule closes every block, the way a bookkeeper rules off a total. Everything the studio does is an entry on that sheet: a row with a time in Data, a description in Causale, a short code in Rif., and, where there is one, an action or a count in Saldo.\n\nDensity is that of a working register: rows are compact, separated by hairlines, and read across. Type is a condensed grotesk set like printed ledger heads, with a plain sans for text and tabular figures everywhere. Colour is ink, blue and red on paper, used as a bookkeeper uses them: blue for structure and action, red only for closures, deadlines and errors.\n\nThe world rejects the beige office-photo hero with three icon cards. Imagery is limited to the studio's own logo; no stock photography.",
+    "keyCharacteristics": [
+      "Four fixed ledger columns carry the layout on desktop; rows, not cards, are the unit.",
+      "Double rules as punctuation: blue for heads and the Saldo column, red for closing a block.",
+      "Condensed uppercase heads with open tracking; tabular numerals throughout.",
+      "Flat paper with one soft page shadow; no card elevation.",
+      "Every listed item carries a code (ORD.01, CON.06, DOC.03)."
+    ],
+    "rules": [
+      { "name": "The Bookkeeper's Pens Rule", "body": "Blue rules and acts; red closes and warns; ink writes. A new surface uses red only for a closing rule, a deadline or an error.", "section": "colors" },
+      { "name": "The Closing Rule", "body": "Every block of rows ends with a 3px red double rule (`border-bottom: 3px double`), never a plain line or a spacer.", "section": "colors" },
+      { "name": "The Printed Head Rule", "body": "Anything that labels, times or codes is condensed, bold and tracked; anything that describes is Sofia Sans in sentence case.", "section": "typography" },
+      { "name": "The Tabular Rule", "body": "Figures are always tabular (`font-variant-numeric: tabular-nums`); never switch to proportional figures for a number in a column.", "section": "typography" },
+      { "name": "The Same Rules Rule", "body": "Every row uses the shared column grid; a new component either fits in Data / Causale / Rif. / Saldo or spans a defined run of them (2-3, 2-4, full).", "section": "layout" },
+      { "name": "The One Sheet Rule", "body": "Only the page itself casts a shadow. Rows, panels and buttons stay flat.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do lay every new block out as ledger rows on the shared Data / Causale / Rif. / Saldo grid.",
+      "Do close every block with the 3px red double rule.",
+      "Do give every listed service, document or item a Rif. code (ORD.01, DOC.05).",
+      "Do set labels, times, codes and heads in Sofia Sans Condensed, bold and tracked, with tabular figures.",
+      "Do make bar or segment length equal real duration whenever time is drawn."
+    ],
+    "donts": [
+      "Don't use the beige office-photo hero with three icon cards.",
+      "Don't invent amounts, building counts or reviews to fill the Saldo column; it holds actions and counts of real entries only.",
+      "Don't put shadows on rows, panels or buttons; only the sheet casts one.",
+      "Don't use red for anything other than closing rules, deadlines and errors.",
+      "Don't round corners beyond the buttons' 2px."
+    ]
+  }
+}
